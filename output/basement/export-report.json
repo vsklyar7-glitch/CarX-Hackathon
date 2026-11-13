@@ -1,0 +1,2167 @@
+{
+  "blender_version": "5.3.0",
+  "objects": [
+    {
+      "name": "Empty",
+      "type": "EMPTY",
+      "visible": false,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Empty.001",
+      "type": "EMPTY",
+      "visible": false,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Camera",
+      "type": "CAMERA",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Point",
+      "type": "LIGHT",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Camera.001",
+      "type": "CAMERA",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Point.002",
+      "type": "LIGHT",
+      "visible": false,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Point.004",
+      "type": "LIGHT",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Camera.002",
+      "type": "CAMERA",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Camera.003",
+      "type": "CAMERA",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Point.001",
+      "type": "LIGHT",
+      "visible": true,
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "body",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        20.0,
+        34.5562629699707,
+        15.763582229614258
+      ]
+    },
+    {
+      "name": "rouf",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        20.163728713989258,
+        15.94495677947998,
+        1.132083535194397
+      ]
+    },
+    {
+      "name": "rouf.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        14.78719711303711,
+        0.46896931529045105,
+        1.2083420753479004
+      ]
+    },
+    {
+      "name": "rouf.002",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        18.098529815673828,
+        13.975287437438965,
+        1.058243751525879
+      ]
+    },
+    {
+      "name": "rouf.003",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        15.725975036621094,
+        19.302780151367188,
+        1.039236307144165
+      ]
+    },
+    {
+      "name": "staris.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.11305715143680573,
+        10.413578033447266,
+        11.468046188354492
+      ]
+    },
+    {
+      "name": "staris.002",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.11305715143680573,
+        4.933794021606445,
+        2.8954854011535645
+      ]
+    },
+    {
+      "name": "staris",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6857866048812866,
+        17.19759750366211,
+        12.870712280273438
+      ]
+    },
+    {
+      "name": "stairs",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        5.8563690185546875,
+        11.962141036987305,
+        10.011645317077637
+      ]
+    },
+    {
+      "name": "shelf",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        5.786953449249268,
+        1.4853792190551758,
+        5.048490524291992
+      ]
+    },
+    {
+      "name": "paint bucket",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6234987378120422,
+        0.6555853486061096,
+        0.7463138699531555
+      ]
+    },
+    {
+      "name": "BezierCurve",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6632974743843079,
+        0.013347707688808441,
+        0.5519872903823853
+      ]
+    },
+    {
+      "name": "food can1",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "food cane2",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "paint sprayer",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.3617270290851593,
+        0.3803423345088959,
+        0.7492480278015137
+      ]
+    },
+    {
+      "name": "oil tank",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.7389513850212097,
+        0.13714991509914398,
+        0.937634289264679
+      ]
+    },
+    {
+      "name": "washing machine",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        2.6830055713653564,
+        2.8084464073181152,
+        3.6982967853546143
+      ]
+    },
+    {
+      "name": "barrel.2",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        2.230269432067871,
+        2.230269432067871,
+        3.092968702316284
+      ]
+    },
+    {
+      "name": "cartonbox.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        1.0185275077819824,
+        1.0059406757354736,
+        0.7962450385093689
+      ]
+    },
+    {
+      "name": "box1",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        2.323178768157959,
+        2.323178768157959,
+        2.323178768157959
+      ]
+    },
+    {
+      "name": "spade",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6815111637115479,
+        0.14812438189983368,
+        3.0400333404541016
+      ]
+    },
+    {
+      "name": "vaccum",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        2.8975300788879395,
+        5.077599048614502,
+        4.651122570037842
+      ]
+    },
+    {
+      "name": "bed",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        4.773393630981445,
+        8.264469146728516,
+        0.9634578824043274
+      ]
+    },
+    {
+      "name": "light.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        3.5240797996520996,
+        0.761759340763092,
+        0.8253942728042603
+      ]
+    },
+    {
+      "name": "big pipe",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        1.2512342929840088,
+        1.3156253099441528,
+        34.57859420776367
+      ]
+    },
+    {
+      "name": "mid pipe",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        2.0597925186157227,
+        1.143007755279541,
+        10.101221084594727
+      ]
+    },
+    {
+      "name": "small pipe",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        10.180806159973145,
+        11.622074127197266,
+        0.10000038146972656
+      ]
+    },
+    {
+      "name": "smallpipe2",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        8.160545349121094,
+        9.315810203552246,
+        0.08015648275613785
+      ]
+    },
+    {
+      "name": "smallpipe3",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.9777297377586365,
+        0.09959801286458969,
+        9.472731590270996
+      ]
+    },
+    {
+      "name": "smallpipe4",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        22.29933738708496,
+        0.18422746658325195,
+        0.3279569745063782
+      ]
+    },
+    {
+      "name": "WATERPIPE",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        22.29933738708496,
+        0.1842268705368042,
+        0.32795706391334534
+      ]
+    },
+    {
+      "name": "arcade.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        1.8955460786819458,
+        2.74168062210083,
+        5.232052803039551
+      ]
+    },
+    {
+      "name": "food can1.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "food can1.002",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "food can1.003",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "cleaner",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6797098517417908,
+        0.19698002934455872,
+        1.0651804208755493
+      ]
+    },
+    {
+      "name": "paint bucket.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6234987378120422,
+        0.6555853486061096,
+        0.7463138699531555
+      ]
+    },
+    {
+      "name": "BezierCurve.002",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.6632974743843079,
+        0.013347707688808441,
+        0.5519872903823853
+      ]
+    },
+    {
+      "name": "food can1.004",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "food cane2.001",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "food cane2.002",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        0.29818153381347656,
+        0.31352660059928894,
+        0.464578241109848
+      ]
+    },
+    {
+      "name": "door bulp",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        1.1340855360031128,
+        1.1340855360031128,
+        0.5092466473579407
+      ]
+    },
+    {
+      "name": "metarig",
+      "type": "ARMATURE",
+      "visible": true,
+      "dimensions": [
+        5.709826946258545,
+        4.872128963470459,
+        6.87290096282959
+      ]
+    },
+    {
+      "name": "skinlessbody",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        3.4190726280212402,
+        1.162208080291748,
+        7.006968021392822
+      ]
+    },
+    {
+      "name": "metarig.001",
+      "type": "ARMATURE",
+      "visible": true,
+      "dimensions": [
+        2.478705406188965,
+        3.255352020263672,
+        3.148637294769287
+      ]
+    },
+    {
+      "name": "body.002",
+      "type": "MESH",
+      "visible": true,
+      "dimensions": [
+        2.552969217300415,
+        3.718599557876587,
+        3.419058084487915
+      ]
+    }
+  ],
+  "images": [
+    {
+      "name": "4826.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\4826.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\4826.png",
+      "exists": true
+    },
+    {
+      "name": "Annotation 2023-05-20 093410.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\Annotation 2023-05-20 093410.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Annotation 2023-05-20 093410.png",
+      "exists": true
+    },
+    {
+      "name": "Annotation 2023-05-20 093439.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\Annotation 2023-05-20 093439.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Annotation 2023-05-20 093439.png",
+      "exists": true
+    },
+    {
+      "name": "arcade2_256.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\arcade\\txt\\arcade2_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\arcade2_256.png",
+      "exists": true
+    },
+    {
+      "name": "B195-05-Coffee-Stain-Remover-1.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\B195-05-Coffee-Stain-Remover-1.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\B195-05-Coffee-Stain-Remover-1.png",
+      "exists": true
+    },
+    {
+      "name": "barrel_dithered_256.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\watch tower\\barrel_dithered_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\barrel_dithered_256.png",
+      "exists": true
+    },
+    {
+      "name": "box_fithered_256px.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\watch tower\\box_fithered_256px.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\box_fithered_256px.png",
+      "exists": true
+    },
+    {
+      "name": "can1.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\can1.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can1.png",
+      "exists": true
+    },
+    {
+      "name": "can2.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\can2.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can2.png",
+      "exists": true
+    },
+    {
+      "name": "can3.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\can3.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can3.png",
+      "exists": true
+    },
+    {
+      "name": "can4.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\can4.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can4.png",
+      "exists": true
+    },
+    {
+      "name": "cartonbox_dithered_256px.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\watch tower\\cartonbox_dithered_256px.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\cartonbox_dithered_256px.png",
+      "exists": true
+    },
+    {
+      "name": "cleaner_bottlz.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\cleaner_bottlz.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\cleaner_bottlz.png",
+      "exists": true
+    },
+    {
+      "name": "con1.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\con1.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\con1.png",
+      "exists": true
+    },
+    {
+      "name": "Concrete bare dirty texture seamless 01538.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\Concrete bare dirty texture seamless 01538.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Concrete bare dirty texture seamless 01538.png",
+      "exists": true
+    },
+    {
+      "name": "daniele-levis-pelusi-rWtBTCAGqXs-unsplash.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\daniele-levis-pelusi-rWtBTCAGqXs-unsplash.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\daniele-levis-pelusi-rWtBTCAGqXs-unsplash.png",
+      "exists": true
+    },
+    {
+      "name": "dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.png",
+      "exists": true
+    },
+    {
+      "name": "Dirty canvas.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\Dirty canvas.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Dirty canvas.png",
+      "exists": true
+    },
+    {
+      "name": "door_256.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\door_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\door_256.png",
+      "exists": true
+    },
+    {
+      "name": "frontglove_256.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\me\\txt\\frontglove_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\frontglove_256.png",
+      "exists": true
+    },
+    {
+      "name": "gas_tank256.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\watch tower\\gas_tank256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\gas_tank256.png",
+      "exists": true
+    },
+    {
+      "name": "glove_256px (1).png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\me\\txt\\glove_256px (1).png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\glove_256px (1).png",
+      "exists": true
+    },
+    {
+      "name": "hkhj.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\hkhj.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\hkhj.png",
+      "exists": true
+    },
+    {
+      "name": "hoodie.256px.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\me\\txt\\hoodie.256px.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\hoodie.256px.png",
+      "exists": true
+    },
+    {
+      "name": "hoodie_back_256.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\me\\txt\\hoodie_back_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\hoodie_back_256.png",
+      "exists": true
+    },
+    {
+      "name": "images.png.002",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\images.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\images.png",
+      "exists": true
+    },
+    {
+      "name": "IMG_20230404_115149.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\me\\txt\\IMG_20230404_115149.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\IMG_20230404_115149.png",
+      "exists": true
+    },
+    {
+      "name": "jihun-park-mattress2.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\jihun-park-mattress2.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\jihun-park-mattress2.png",
+      "exists": true
+    },
+    {
+      "name": "Medidas de mueble de máquina recreativa arcade o cómo medir a",
+      "original": "//..\\Desktop\\texture and stuff\\references\\arcade\\txt\\arcade256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\arcade256.png",
+      "exists": true
+    },
+    {
+      "name": "paintcan.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\paintcan.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\paintcan.png",
+      "exists": true
+    },
+    {
+      "name": "pants_256x256px.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\me\\txt\\pants_256x256px.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\pants_256x256px.png",
+      "exists": true
+    },
+    {
+      "name": "pj0dx4ni.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\pj0dx4ni.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\pj0dx4ni.png",
+      "exists": true
+    },
+    {
+      "name": "rouf wooden_256.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\rouf wooden_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\rouf wooden_256.png",
+      "exists": true
+    },
+    {
+      "name": "Rusty metallic_stairs_256.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\Rusty metallic_stairs_256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Rusty metallic_stairs_256.png",
+      "exists": true
+    },
+    {
+      "name": "seven-roadtrips-RIG1irm8si4-unsplash.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\seven-roadtrips-RIG1irm8si4-unsplash.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\seven-roadtrips-RIG1irm8si4-unsplash.png",
+      "exists": true
+    },
+    {
+      "name": "SkinlessHuman_LowRes.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\SkinlessHuman_LowRes.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\SkinlessHuman_LowRes.png",
+      "exists": true
+    },
+    {
+      "name": "spade_2586.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\spade_2586.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\spade_2586.png",
+      "exists": true
+    },
+    {
+      "name": "spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.jpg.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.png",
+      "exists": true
+    },
+    {
+      "name": "stone_stairs-256.png.001",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\stone_stairs-256.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\stone_stairs-256.png",
+      "exists": true
+    },
+    {
+      "name": "vaccum pipe256.jpg",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\vaccum pipe256.jpg",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\vaccum pipe256.png",
+      "exists": true
+    },
+    {
+      "name": "washin_machine.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\256\\washin_machine.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\washin_machine.png",
+      "exists": true
+    },
+    {
+      "name": "waterpipe.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\txt\\waterpipe.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\waterpipe.png",
+      "exists": true
+    },
+    {
+      "name": "wet-vacuum-cleaner-1000x1000-2.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\wet-vacuum-cleaner-1000x1000-2.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\wet-vacuum-cleaner-1000x1000-2.png",
+      "exists": true
+    },
+    {
+      "name": "wet-vacuum-cleaner-1000x1000-3.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\wet-vacuum-cleaner-1000x1000-3.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\wet-vacuum-cleaner-1000x1000-3.png",
+      "exists": true
+    },
+    {
+      "name": "wet-vacuum-cleaner-1000x1000.png",
+      "original": "//..\\Desktop\\texture and stuff\\references\\bd_party\\wet-vacuum-cleaner-1000x1000.png",
+      "resolved": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\wet-vacuum-cleaner-1000x1000.png",
+      "exists": true
+    }
+  ],
+  "materials": [
+    {
+      "name": "arcade1",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "arcade2_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\arcade2_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "arcade2",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Medidas de mueble de máquina recreativa arcade o cómo medir a",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\arcade256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "arm.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "hoodie.256px.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\hoodie.256px.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "barrel",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "barrel_dithered_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\barrel_dithered_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "bed",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "jihun-park-mattress2.jpg",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\jihun-park-mattress2.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "big_waterpipe",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "images.png.002",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\images.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "body.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "hoodie.256px.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\hoodie.256px.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "can_graber",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Rusty metallic_stairs_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Rusty metallic_stairs_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "cartonbox",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "cartonbox_dithered_256px.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\cartonbox_dithered_256px.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "copper_wire",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "daniele-levis-pelusi-rWtBTCAGqXs-unsplash.jpg",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\daniele-levis-pelusi-rWtBTCAGqXs-unsplash.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.20601288974285126,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "door",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "door_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\door_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "door corners",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Dirty canvas.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Dirty canvas.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "Dots Stroke",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.5,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "food_can",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "can4.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can4.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "food_can.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "can1.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can1.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "food_can.002",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "can3.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can3.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "food_can.003",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "can2.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\can2.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "foots.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "glove_256px (1).png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\glove_256px (1).png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "gloves.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "frontglove_256.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\frontglove_256.png",
+          "targets": [
+            "Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "ground",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Concrete bare dirty texture seamless 01538.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Concrete bare dirty texture seamless 01538.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "head.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "IMG_20230404_115149.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\IMG_20230404_115149.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "hood.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "hoodie_back_256.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\hoodie_back_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "legs.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "pants_256x256px.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\pants_256x256px.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "light",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": []
+    },
+    {
+      "name": "light.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": []
+    },
+    {
+      "name": "lil room wall",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "con1.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\con1.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "machine_back",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Annotation 2023-05-20 093410.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Annotation 2023-05-20 093410.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.12598425149917603,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "machine_front",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "washin_machine.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\washin_machine.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "machine_up",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Annotation 2023-05-20 093439.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Annotation 2023-05-20 093439.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "Material",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "cleaner_bottlz.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\cleaner_bottlz.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "Material.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "paintcan.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\paintcan.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.5,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "metal_stairs handle",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Rusty metallic_stairs_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Rusty metallic_stairs_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.31496062874794006,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "oiltank",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "gas_tank256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\gas_tank256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.6141732335090637,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "paintcan",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "paintcan.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\paintcan.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "plastic",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "4826.jpg",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\4826.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "plastic.001",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "Rusty metallic_stairs_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\Rusty metallic_stairs_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "rusty can",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "pj0dx4ni.jpg",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\pj0dx4ni.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.5314960479736328,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "screen",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "videoplayback.mp4",
+          "path": "//..\\Desktop\\texture and stuff\\references\\bd_party\\videoplayback.mp4",
+          "targets": [
+            "Color"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shelf_metal",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "hkhj.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\hkhj.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "skinlessmaterial",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "SkinlessHuman_LowRes.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\SkinlessHuman_LowRes.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "spade",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "spade_2586.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\spade_2586.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "sprayer",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.jpg.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "stone_stairs",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "stone_stairs-256.png.001",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\stone_stairs-256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "v_pipe",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "vaccum pipe256.jpg",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\vaccum pipe256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "vaccum",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "wet-vacuum-cleaner-1000x1000-2.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\wet-vacuum-cleaner-1000x1000-2.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.22047244012355804,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "vaccum_sucker",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "wet-vacuum-cleaner-1000x1000-3.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\wet-vacuum-cleaner-1000x1000-3.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "walls",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "water_pipe",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "waterpipe.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\waterpipe.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.24409446120262146,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "wood_box",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "box_fithered_256px.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\box_fithered_256px.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 1.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "wood_planks",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "seven-roadtrips-RIG1irm8si4-unsplash.jpg",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\seven-roadtrips-RIG1irm8si4-unsplash.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.07480314373970032,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    },
+    {
+      "name": "wood_rouf",
+      "color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "textures": [
+        {
+          "image": "rouf wooden_256.png",
+          "path": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\textures\\Unpacked\\rouf wooden_256.png",
+          "targets": [
+            "Base Color"
+          ]
+        }
+      ],
+      "Base Color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "Alpha": 1.0
+    }
+  ],
+  "fbx": "C:\\Users\\Макар\\Documents\\GitHub\\CarX-Hackathon\\Assets\\Prefabs\\basement\\source\\basement.fbx",
+  "fbx_bytes": 823180
+}

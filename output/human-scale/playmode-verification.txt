@@ -1,0 +1,8 @@
+PASS
+imagecheck: W input walked 1,505m in 1,004s (1,500m/s), 163 advancing frames; grounded, eyes=1.65m
+imagecheck: CharacterController stops at wall (0,620m)
+americannredotoday1: W input walked 1,506m in 1,004s (1,500m/s), 212 advancing frames; grounded, eyes=1.65m
+americannredotoday1: CharacterController stops at wall (0,613m)
+Basement: W input walked 1,503m in 1,002s (1,500m/s), 184 advancing frames; grounded, eyes=1.65m
+Basement: CharacterController stops at wall (0,620m)
+Basement stairs: 101 tread samples, maximum riser=0,179m, stepOffset=0,28m

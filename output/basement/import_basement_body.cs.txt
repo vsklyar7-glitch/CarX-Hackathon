@@ -1,0 +1,78 @@
+const string modelPath = "Assets/Prefabs/basement/source/basement.fbx";
+const string prefabPath = "Assets/Prefabs/basement/Basement.prefab";
+UnityEditor.AssetDatabase.Refresh();
+var importer = (UnityEditor.ModelImporter)UnityEditor.AssetImporter.GetAtPath(modelPath);
+if (importer == null) throw new System.Exception("FBX importer not found");
+importer.importCameras = false;
+importer.importLights = false;
+importer.importAnimation = false;
+importer.materialImportMode = UnityEditor.ModelImporterMaterialImportMode.ImportStandard;
+importer.SaveAndReimport();
+var importedMaterials = System.Linq.Enumerable.OfType<UnityEngine.Material>(UnityEditor.AssetDatabase.LoadAllAssetsAtPath(modelPath));
+System.IO.Directory.CreateDirectory("Assets/Prefabs/basement/materials");
+int createdMaterials = 0;
+int mappedTextures = 0;
+foreach (var original in importedMaterials)
+{
+    var spec = System.Linq.Enumerable.FirstOrDefault(specs, s => s.name == original.name);
+    if (spec == null) throw new System.Exception("Material specification missing: " + original.name);
+    var safeName = string.Join("_", original.name.Split(System.IO.Path.GetInvalidFileNameChars()));
+    var materialPath = "Assets/Prefabs/basement/materials/" + safeName + ".mat";
+    var material = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Material>(materialPath);
+    if (!material)
+    {
+        material = new UnityEngine.Material(UnityEngine.Shader.Find("Universal Render Pipeline/Lit"));
+        material.name = original.name;
+        var texture = string.IsNullOrEmpty(spec.texture) ? null : UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(spec.texture);
+        material.SetColor("_BaseColor", texture ? UnityEngine.Color.white : spec.color);
+        if (texture) { material.SetTexture("_BaseMap", texture); mappedTextures++; }
+        material.SetFloat("_Smoothness", UnityEngine.Mathf.Clamp01(spec.smoothness));
+        material.SetFloat("_Metallic", UnityEngine.Mathf.Clamp01(spec.metallic));
+        UnityEditor.AssetDatabase.CreateAsset(material, materialPath);
+        createdMaterials++;
+    }
+    importer.AddRemap(new UnityEditor.AssetImporter.SourceAssetIdentifier(typeof(UnityEngine.Material), original.name), material);
+}
+importer.SaveAndReimport();
+var model = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(modelPath);
+if (!model) throw new System.Exception("FBX did not import as GameObject");
+var previewScene = UnityEditor.SceneManagement.EditorSceneManager.NewPreviewScene();
+try
+{
+    var instance = (UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(model, previewScene);
+    instance.name = "Basement";
+    int colliders = 0;
+    foreach (var filter in instance.GetComponentsInChildren<UnityEngine.MeshFilter>(true))
+    {
+        if (!filter.sharedMesh) continue;
+        var collider = filter.gameObject.GetComponent<UnityEngine.MeshCollider>();
+        if (!collider) collider = filter.gameObject.AddComponent<UnityEngine.MeshCollider>();
+        collider.sharedMesh = filter.sharedMesh;
+        collider.convex = false;
+        colliders++;
+    }
+    var renderers = instance.GetComponentsInChildren<UnityEngine.Renderer>(true);
+    if (renderers.Length == 0) throw new System.Exception("Empty basement model");
+    var bounds = renderers[0].bounds;
+    int materialSlots = 0;
+    foreach (var renderer in renderers)
+    {
+        bounds.Encapsulate(renderer.bounds);
+        foreach (var material in renderer.sharedMaterials)
+        {
+            if (!material || material.shader.name != "Universal Render Pipeline/Lit") throw new System.Exception("Invalid URP material on " + renderer.name);
+            materialSlots++;
+        }
+    }
+    bool saved;
+    UnityEditor.PrefabUtility.SaveAsPrefabAsset(instance, prefabPath, out saved);
+    if (!saved) throw new System.Exception("Could not save Basement.prefab");
+    var prefab = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(prefabPath);
+    if (!prefab) throw new System.Exception("Saved prefab failed to load");
+    var result = "PASS: " + prefabPath + " | renderers=" + renderers.Length + " | mesh colliders=" + colliders + " | material slots=" + materialSlots + " | new URP materials=" + createdMaterials + " | mapped textures=" + mappedTextures + " | bounds=" + bounds;
+    System.IO.File.WriteAllText("output/basement/unity-import-verification.txt", result);
+    UnityEditor.Selection.activeObject = prefab;
+    UnityEditor.EditorGUIUtility.PingObject(prefab);
+    return result;
+}
+finally { UnityEditor.SceneManagement.EditorSceneManager.ClosePreviewScene(previewScene); }

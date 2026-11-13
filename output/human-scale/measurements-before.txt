@@ -1,0 +1,100 @@
+ROOT imagecheck | world=Center: (0.969, 1.572, -2.349), Extents: (15.924, 2.050, 10.561) | colliders=1440
+imagecheck/Chair01 | active=True | center=(15.4772, 0.6299, 1.0229) | worldSize=(0.9378, 1.3076, 0.7908) | material=Chair___Table
+imagecheck/Chair02 | active=True | center=(15.4772, 0.6299, 1.8919) | worldSize=(0.9378, 1.3076, 0.7908) | material=Chair___Table
+imagecheck/Chair03 | active=True | center=(-6.2508, 0.5974, -10.2502) | worldSize=(1.3172, 1.2675, 1.3217) | material=Chair___Table,lambert8
+imagecheck/Chair04 | active=True | center=(-8.0392, 0.5974, -10.2533) | worldSize=(0.9756, 1.2675, 0.9209) | material=Chair___Table,lambert8
+imagecheck/Chair05 | active=True | center=(-10.0710, 0.5974, -9.2956) | worldSize=(0.9521, 1.2675, 0.9920) | material=Chair___Table,lambert8
+imagecheck/Chair06 | active=True | center=(-6.2565, 0.5974, -7.2901) | worldSize=(0.9783, 1.2675, 0.9900) | material=Chair___Table,lambert8
+imagecheck/Chair09 | active=True | center=(2.7818, 0.5974, -10.8881) | worldSize=(0.7268, 1.2675, 0.8730) | material=Chair___Table,lambert8
+imagecheck/Chair11 | active=True | center=(2.0911, 0.5470, -4.6818) | worldSize=(0.7362, 1.2174, 0.8730) | material=Chair___Table
+imagecheck/Chair12 | active=True | center=(3.1657, 0.5470, -4.6818) | worldSize=(0.7362, 1.2174, 0.8730) | material=Chair___Table
+imagecheck/Chair6127 | active=True | center=(-7.9550, 0.5835, -7.2941) | worldSize=(1.2965, 1.2897, 1.2965) | material=Chair___Table,lambert8
+imagecheck/Desk01 | active=True | center=(2.1217, 0.3982, 6.9469) | worldSize=(1.5741, 0.9433, 1.2580) | material=lambert8
+imagecheck/Meeting_Room_Ground | active=True | center=(-8.8504, -0.1234, -8.6890) | worldSize=(12.1296, 0.1326, 7.2356) | material=lambert9
+imagecheck/Office_Ground | active=True | center=(2.0563, -0.1234, -8.6890) | worldSize=(9.7155, 0.1326, 7.2356) | material=lambert9
+imagecheck/pPlane3 | active=True | center=(7.9236, 1.1782, 1.3949) | worldSize=(0.8074, 2.4651, 0.9573) | material=lambert16
+imagecheck/pPlane5 | active=True | center=(-4.3385, 1.1782, 6.9673) | worldSize=(1.1988, 2.4651, 1.1206) | material=lambert16
+imagecheck/pPlane6 | active=True | center=(0.6454, 1.1782, -11.0054) | worldSize=(1.1612, 2.4651, 1.2209) | material=lambert16
+imagecheck/ReceptionGround | active=True | center=(11.7795, -0.1257, 0.9706) | worldSize=(9.7155, 0.1373, 12.0895) | material=lambert9
+imagecheck/Table | active=True | center=(14.1789, 0.2963, 1.4421) | worldSize=(0.9012, 0.5936, 1.1039) | material=Chair___Table
+imagecheck/Table01 | active=True | center=(14.1099, 0.2963, 3.6091) | worldSize=(0.9012, 0.5936, 1.1039) | material=Chair___Table
+imagecheck/Table03 | active=True | center=(-0.6140, 0.4164, 7.0609) | worldSize=(1.6545, 0.8897, 1.0364) | material=Chair___Table
+imagecheck/tables_and_desks | active=True | center=(2.5948, 0.4064, -3.4014) | worldSize=(1.1039, 0.9174, 0.9012) | material=Props,Chair___Table
+imagecheck/TwoChairs | active=True | center=(15.4772, 0.6299, 3.6004) | worldSize=(0.9378, 1.3076, 1.4172) | material=Chair___Table
+imagecheck/Ceiling | active=True | center=(-0.3637, 3.2100, 1.4781) | worldSize=(14.6563, 0.1800, 13.3675) | material=Acoustic_ceiling
+imagecheck/North wall trim | active=True | center=(-0.3637, 3.0950, 8.1219) | worldSize=(14.6563, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/South wall trim | active=True | center=(-0.3637, 3.0950, -5.1656) | worldSize=(14.6563, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/West wall trim | active=True | center=(-7.6518, 3.0950, 1.4781) | worldSize=(0.0550, 0.0600, 13.3675) | material=Ceiling_T_grid
+imagecheck/East wall trim | active=True | center=(6.9245, 3.0950, 1.4781) | worldSize=(0.0550, 0.0600, 13.3675) | material=Ceiling_T_grid
+imagecheck/Ceiling | active=True | center=(-8.8504, 3.2100, -8.6890) | worldSize=(12.2096, 0.1800, 7.3156) | material=Acoustic_ceiling
+imagecheck/North wall trim | active=True | center=(-8.8504, 3.0950, -5.0712) | worldSize=(12.2096, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/South wall trim | active=True | center=(-8.8504, 3.0950, -12.3068) | worldSize=(12.2096, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/West wall trim | active=True | center=(-14.9152, 3.0950, -8.6890) | worldSize=(0.0550, 0.0600, 7.3156) | material=Ceiling_T_grid
+imagecheck/East wall trim | active=True | center=(-2.7855, 3.0950, -8.6890) | worldSize=(0.0550, 0.0600, 7.3156) | material=Ceiling_T_grid
+imagecheck/Ceiling | active=True | center=(2.0563, 3.2100, -8.6890) | worldSize=(9.7955, 0.1800, 7.3156) | material=Acoustic_ceiling
+imagecheck/North wall trim | active=True | center=(2.0563, 3.0950, -5.0712) | worldSize=(9.7955, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/South wall trim | active=True | center=(2.0563, 3.0950, -12.3068) | worldSize=(9.7955, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/West wall trim | active=True | center=(-2.8015, 3.0950, -8.6890) | worldSize=(0.0550, 0.0600, 7.3156) | material=Ceiling_T_grid
+imagecheck/East wall trim | active=True | center=(6.9141, 3.0950, -8.6890) | worldSize=(0.0550, 0.0600, 7.3156) | material=Ceiling_T_grid
+imagecheck/Ceiling | active=True | center=(11.7795, 3.2100, 0.9706) | worldSize=(9.7955, 0.1800, 12.1695) | material=Acoustic_ceiling
+imagecheck/North wall trim | active=True | center=(11.7795, 3.0950, 7.0154) | worldSize=(9.7955, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/South wall trim | active=True | center=(11.7795, 3.0950, -5.0741) | worldSize=(9.7955, 0.0600, 0.0550) | material=Ceiling_T_grid
+imagecheck/West wall trim | active=True | center=(6.9217, 3.0950, 0.9706) | worldSize=(0.0550, 0.0600, 12.1695) | material=Ceiling_T_grid
+imagecheck/East wall trim | active=True | center=(16.6372, 3.0950, 0.9706) | worldSize=(0.0550, 0.0600, 12.1695) | material=Ceiling_T_grid
+ROOT americannredotoday1 | world=Center: (-111.073, 12.621, 7.196), Extents: (57.556, 12.645, 34.102) | colliders=132
+americannredotoday1/highchair | active=True | center=(-18.1418, 4.6712, -25.5115) | worldSize=(3.3071, 9.3138, 3.4447) | material=HIGHCHAIRR,lambert9
+americannredotoday1/leatherchairs | active=True | center=(-9.0546, 2.3977, -1.4721) | worldSize=(4.8532, 4.8086, 13.7428) | material=leatherchairlegs,leatheragain
+americannredotoday1/pPlane5 | active=True | center=(-10.2070, 8.8239, 13.3500) | worldSize=(6.6964, 11.9025, 0.2000) | material=MANIMAGE,FRAME,frameglass
+americannredotoday1/pPlane8 | active=True | center=(13.7441, 8.8239, 13.3500) | worldSize=(6.6964, 11.9025, 0.2000) | material=WOMANIMAGE,FRAME,frameglass
+americannredotoday1/pPlane9 | active=True | center=(22.1552, 0.0000, -16.4036) | worldSize=(91.4096, 0.0000, 68.2032) | material=gen_floor_laminate
+americannredotoday1/pPlane11 | active=True | center=(43.7268, 20.8623, -2.2976) | worldSize=(37.9368, 0.0000, 35.7825) | material=whitewall
+americannredotoday1/pPlane12 | active=True | center=(21.9680, 15.5764, -32.1351) | worldSize=(86.0662, 2.5146, 0.0000) | material=lambert1
+americannredotoday1/table | active=True | center=(1.5574, 0.7990, -1.0061) | worldSize=(8.8020, 1.5375, 8.9681) | material=phongE2,blinn8
+americannredotoday1/toptablesurface | active=True | center=(-7.4078, 1.6899, -15.3307) | worldSize=(2.3662, 3.3783, 2.9118) | material=poletablletopbot,metalpoletable
+americannredotoday1/Head rail | active=True | center=(-20.3260, 14.7303, -3.8312) | worldSize=(0.3813, 0.3177, 25.1927) | material=WindowFramePaint
+ROOT Basement | world=Center: (-77.118, 4.036, -25.158), Extents: (11.150, 8.653, 18.238) | colliders=42
+Basement/arcade.001 | active=True | center=(-8.9471, 2.4472, -1.2787) | worldSize=(3.8568, 5.7175, 1.8955) | material=arcade1,arcade2,screen
+Basement/barrel.2 | active=True | center=(3.7587, 1.5359, -5.1331) | worldSize=(3.0801, 3.0930, 3.0801) | material=barrel
+Basement/bed | active=True | center=(-7.3645, 0.4691, 6.4470) | worldSize=(4.7734, 0.9635, 8.2645) | material=bed
+Basement/big pipe | active=True | center=(-8.3994, 7.7457, 3.2842) | worldSize=(1.3156, 1.2512, 34.5786) | material=big_waterpipe
+Basement/body | active=True | center=(0.0000, 7.8635, 3.2981) | worldSize=(20.0000, 15.7636, 34.5563) | material=walls,ground,door,wood_rouf,door corners
+Basement/body.002 | active=True | center=(-8.4222, 2.0287, 5.1375) | worldSize=(5.3994, 4.7276, 2.9131) | material=head.001,arm.001,gloves.001,foots.001,body.001,legs.001,hood.001
+Basement/box1 | active=True | center=(3.7950, 1.1360, -2.1872) | worldSize=(2.3232, 2.3232, 2.3232) | material=wood_box
+Basement/cartonbox.001 | active=True | center=(3.7677, 2.7069, -2.5748) | worldSize=(1.0185, 0.7962, 1.0059) | material=cartonbox
+Basement/cleaner | active=True | center=(-2.4011, 1.6178, -13.6107) | worldSize=(0.7040, 1.0652, 0.4374) | material=Material
+Basement/door bulp | active=True | center=(7.3288, 15.5036, -13.0939) | worldSize=(1.1341, 0.5092, 1.1341) | material=light,plastic
+Basement/food can1 | active=True | center=(-1.9244, 3.0608, -13.1355) | worldSize=(0.2982, 0.4646, 0.3135) | material=food_can
+Basement/food can1.001 | active=True | center=(-1.7683, 2.6070, -13.1355) | worldSize=(0.2982, 0.4646, 0.3135) | material=food_can.001,food_can
+Basement/food can1.002 | active=True | center=(-2.1380, 2.6070, -13.1355) | worldSize=(0.2982, 0.4646, 0.3135) | material=food_can.002,food_can
+Basement/food can1.003 | active=True | center=(-1.8886, 2.6070, -12.8451) | worldSize=(0.2982, 0.4646, 0.3135) | material=food_can.003,food_can
+Basement/food can1.004 | active=True | center=(-1.4648, 2.6070, -12.9297) | worldSize=(0.2982, 0.4646, 0.3135) | material=food_can.003,food_can
+Basement/food cane2 | active=True | center=(0.6395, 2.5356, -12.8800) | worldSize=(0.5163, 0.3141, 0.5511) | material=rusty can,Material.001
+Basement/food cane2.001 | active=True | center=(1.2367, 2.6070, -13.0399) | worldSize=(0.3241, 0.4646, 0.3093) | material=rusty can,Material.001
+Basement/food cane2.002 | active=True | center=(0.9054, 2.6070, -13.1355) | worldSize=(0.2982, 0.4646, 0.3135) | material=rusty can,Material.001
+Basement/light.001 | active=True | center=(-2.9165, 8.9974, 0.0740) | worldSize=(1.1141, 1.1219, 3.5241) | material=light.001,plastic.001
+Basement/mid pipe | active=True | center=(-8.9152, 5.0117, -6.7874) | worldSize=(2.0598, 10.1012, 1.1430) | material=big_waterpipe
+Basement/oil tank | active=True | center=(1.9461, 1.5664, -13.1513) | worldSize=(0.7078, 0.9376, 0.4899) | material=oiltank
+Basement/paint bucket | active=True | center=(1.6401, 5.4317, -13.1355) | worldSize=(0.6235, 0.7463, 0.6556) | material=paintcan
+Basement/BezierCurve | active=True | center=(1.6352, 6.0258, -13.1378) | worldSize=(0.6633, 0.5520, 0.0133) | material=can_graber
+Basement/paint bucket.001 | active=True | center=(-0.5792, 2.7534, -13.1503) | worldSize=(0.6235, 0.7463, 0.6556) | material=paintcan
+Basement/BezierCurve.002 | active=True | center=(-0.5840, 3.3475, -13.1526) | worldSize=(0.6633, 0.5520, 0.0133) | material=can_graber
+Basement/paint sprayer | active=True | center=(0.0562, 1.4732, -13.3462) | worldSize=(0.3617, 0.7492, 0.3803) | material=sprayer
+Basement/rouf | active=True | center=(0.0000, 9.5500, 12.4765) | worldSize=(20.1637, 1.1321, 15.9450) | material=wood_planks
+Basement/rouf.001 | active=True | center=(-2.6883, 9.5616, -13.6652) | worldSize=(14.7872, 1.2083, 0.4690) | material=wood_planks
+Basement/rouf.002 | active=True | center=(-2.9811, 9.4865, -4.7487) | worldSize=(13.9753, 1.0582, 18.0985) | material=wood_planks
+Basement/rouf.003 | active=True | center=(-0.3173, 9.4960, 12.4147) | worldSize=(19.3028, 1.0392, 15.7260) | material=wood_planks
+Basement/shelf | active=True | center=(-0.0300, 2.5330, -13.2068) | worldSize=(5.7870, 5.0485, 1.4854) | material=shelf_metal
+Basement/skinlessbody | active=True | center=(4.3213, 0.1882, -9.7413) | worldSize=(8.1139, 3.4707, 5.7888) | material=skinlessmaterial
+Basement/small pipe | active=True | center=(-5.3566, 8.9514, -10.0892) | worldSize=(10.1808, 0.1000, 11.6221) | material=copper_wire
+Basement/smallpipe2 | active=True | center=(-6.6444, 8.8691, -10.6420) | worldSize=(8.1605, 0.0802, 9.3158) | material=copper_wire
+Basement/smallpipe3 | active=True | center=(-10.1013, 4.2591, -5.6687) | worldSize=(0.9777, 9.4727, 0.0996) | material=copper_wire
+Basement/smallpipe4 | active=True | center=(0.0289, 8.9996, 9.8393) | worldSize=(22.2993, 0.3280, 0.1842) | material=copper_wire
+Basement/spade | active=True | center=(4.5136, 1.4644, 1.2810) | worldSize=(0.5070, 3.0456, 0.6918) | material=spade
+Basement/stairs | active=True | center=(7.6466, 4.9038, -2.8770) | worldSize=(5.8564, 10.0117, 11.9621) | material=stone_stairs
+Basement/staris | active=True | center=(4.9936, 6.3891, -5.4205) | worldSize=(0.6858, 12.8707, 17.1976) | material=metal_stairs handle,lil room wall,door corners
+Basement/staris.001 | active=True | center=(4.8687, 6.8575, -2.6851) | worldSize=(0.1131, 11.4681, 10.4136) | material=metal_stairs handle
+Basement/staris.002 | active=True | center=(4.8687, 11.2723, -11.1498) | worldSize=(0.1131, 2.8955, 4.9338) | material=metal_stairs handle
+Basement/vaccum | active=True | center=(-7.9212, 2.3180, -11.2401) | worldSize=(2.8975, 4.6511, 5.0776) | material=v_pipe,vaccum_sucker,vaccum
+Basement/washing machine | active=True | center=(-5.2856, 1.8495, -12.4343) | worldSize=(2.6830, 3.6983, 2.8084) | material=machine_front,machine_back,machine_up
+Basement/WATERPIPE | active=True | center=(0.0289, 8.9996, 4.4457) | worldSize=(22.2993, 0.3280, 0.1842) | material=water_pipe
+PLAYER PREFAB | height=1,8 radius=0,3 center=(0.00, 0.90, 0.00) walk=2,2 run=3,5 camera=(0.00, 1.65, 0.00) | rootScale=(1.00, 1.00, 1.00)

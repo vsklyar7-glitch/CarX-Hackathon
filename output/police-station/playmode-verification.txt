@@ -1,0 +1,1 @@
+PASS: Play Mode advanced 25 frames. 23 enabled realtime spotlights and 46 emissive tubes verified. Runtime preview captured; no changes to the player camera were saved.

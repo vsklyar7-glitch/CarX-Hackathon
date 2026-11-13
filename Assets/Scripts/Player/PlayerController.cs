@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 2.2f;
+    public float walkSpeed = 1.5f;
     public float runSpeed = 3.5f;
     public float gravity = -9.81f;
     public Transform playerCamera;

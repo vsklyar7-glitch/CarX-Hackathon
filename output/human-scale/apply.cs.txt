@@ -1,0 +1,114 @@
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+if (scene.path != "Assets/Scenes/Scene2.unity") throw new System.Exception("Open Scene2 first");
+var roots = scene.GetRootGameObjects();
+string[] names = { "imagecheck", "americannredotoday1", "Basement" };
+float[] scales = { 0.8f, 0.15f, 0.25f };
+var report = new System.Collections.Generic.List<string>();
+for (int i = 0; i < names.Length; i++)
+{
+    var root = System.Linq.Enumerable.Single(roots,g=>g.name==names[i]);
+    float previousScale = root.transform.localScale.x;
+    float ratio = scales[i]/previousScale;
+    UnityEditor.Undo.RecordObject(root.transform,"Set human scale");
+    root.transform.localScale = UnityEngine.Vector3.one * scales[i];
+    UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(root.transform);
+    foreach(var light in root.GetComponentsInChildren<UnityEngine.Light>(true))
+    {
+        if(light.type==UnityEngine.LightType.Directional)continue;
+        UnityEditor.Undo.RecordObject(light,"Rescale light reach");
+        light.range *= ratio;
+        UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(light);
+    }
+    report.Add(root.name+" scale="+scales[i]+" position="+root.transform.position);
+}
+const string playerPath="Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab";
+var prefabRoot=UnityEditor.PrefabUtility.LoadPrefabContents(playerPath);
+try
+{
+    prefabRoot.transform.localScale=UnityEngine.Vector3.one;
+    var control=prefabRoot.GetComponent<PlayerController>();
+    control.walkSpeed=1.5f;
+    control.runSpeed=3.5f;
+    var capsule=prefabRoot.GetComponent<UnityEngine.CharacterController>();
+    capsule.height=1.8f;
+    capsule.radius=0.28f;
+    capsule.center=new UnityEngine.Vector3(0,0.9f,0);
+    capsule.stepOffset=0.28f;
+    capsule.slopeLimit=50;
+    capsule.skinWidth=0.025f;
+    capsule.minMoveDistance=0;
+    control.playerCamera.localPosition=new UnityEngine.Vector3(0,1.65f,0);
+    var camera=control.playerCamera.GetComponent<UnityEngine.Camera>();
+    camera.fieldOfView=70;
+    camera.nearClipPlane=0.04f;
+    UnityEditor.PrefabUtility.SaveAsPrefabAsset(prefabRoot,playerPath);
+}
+finally { UnityEditor.PrefabUtility.UnloadPrefabContents(prefabRoot); }
+UnityEngine.Physics.SyncTransforms();
+var spawns=new System.Collections.Generic.List<UnityEngine.Transform>();
+for(int i=0;i<names.Length;i++)
+{
+    var root=System.Linq.Enumerable.Single(roots,g=>g.name==names[i]);
+    string floorName=i==0?"DetectiveSchool":i==1?"pPlane9":"body";
+    var floor=System.Linq.Enumerable.Single(root.GetComponentsInChildren<UnityEngine.MeshRenderer>(true),r=>r.name==floorName);
+    var bounds=floor.bounds;
+    var candidates=new System.Collections.Generic.List<UnityEngine.Vector3>();
+    // Search near the centre, then around it, remaining below the ceiling.
+    var center=bounds.center;
+    if(i==2)center=root.transform.TransformPoint(new UnityEngine.Vector3(0,0,2));
+    for(float radius=0;radius<8;radius+=0.7f)
+    for(int direction=0;direction<16;direction++)
+    {
+        float angle=direction*UnityEngine.Mathf.PI/8;
+        candidates.Add(new UnityEngine.Vector3(center.x+UnityEngine.Mathf.Cos(angle)*radius,root.transform.position.y+1.3f,center.z+UnityEngine.Mathf.Sin(angle)*radius));
+    }
+    bool found=false;
+    UnityEngine.Vector3 spawn=UnityEngine.Vector3.zero;
+    foreach(var candidate in candidates)
+    {
+        var hits=UnityEngine.Physics.RaycastAll(candidate,UnityEngine.Vector3.down,3,UnityEngine.Physics.DefaultRaycastLayers,UnityEngine.QueryTriggerInteraction.Ignore);
+        foreach(var hit in hits)
+        {
+            if(!hit.transform.IsChildOf(root.transform)||hit.collider.gameObject.name!=floorName||hit.normal.y<0.95f)continue;
+            var feet=hit.point+UnityEngine.Vector3.up*0.04f;
+            if(UnityEngine.Physics.CheckCapsule(feet+UnityEngine.Vector3.up*0.30f,feet+UnityEngine.Vector3.up*1.50f,0.27f,UnityEngine.Physics.DefaultRaycastLayers,UnityEngine.QueryTriggerInteraction.Ignore))continue;
+            spawn=feet;found=true;break;
+        }
+        if(found)break;
+    }
+    if(!found)throw new System.Exception("No unobstructed human-size spawn in "+root.name);
+    var marker=root.transform.Find("PlayerSpawn");
+    if(!marker){var markerObject=new UnityEngine.GameObject("PlayerSpawn");markerObject.transform.SetParent(root.transform,false);marker=markerObject.transform;}
+    marker.position=spawn;
+    marker.rotation=UnityEngine.Quaternion.identity;
+    spawns.Add(marker);
+    report.Add(root.name+" PlayerSpawn="+spawn.ToString("F4")+" floor="+floorName);
+}
+var players=UnityEngine.Object.FindObjectsByType<PlayerController>(UnityEngine.FindObjectsInactive.Include);
+if(players.Length>1)throw new System.Exception("Multiple PlayerControllers in Scene2");
+var player=players.Length==1?players[0].gameObject:(UnityEngine.GameObject)UnityEditor.PrefabUtility.InstantiatePrefab(UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>(playerPath),scene);
+player.transform.localScale=UnityEngine.Vector3.one;
+var playerCollider=player.GetComponent<UnityEngine.CharacterController>();
+playerCollider.enabled=false;
+player.transform.position=spawns[0].position;
+player.transform.rotation=spawns[0].rotation;
+playerCollider.enabled=true;
+player.GetComponent<PlayerController>().walkSpeed=1.5f;
+UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(player.transform);
+foreach(var camera in UnityEngine.Object.FindObjectsByType<UnityEngine.Camera>(UnityEngine.FindObjectsInactive.Include))
+{
+    if(camera.transform.IsChildOf(player.transform))continue;
+    if(camera.gameObject.name=="Main Camera")
+    {
+        UnityEditor.Undo.RecordObject(camera,"Use player camera");
+        camera.enabled=false;
+        var listener=camera.GetComponent<UnityEngine.AudioListener>();
+        if(listener)listener.enabled=false;
+    }
+}
+UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+if(!UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene))throw new System.Exception("Could not save Scene2");
+report.Add("Player: height=1.8m; eye height=1.65m; radius=0.28m; step=0.28m; walk=1.5m/s; run=3.5m/s; start=police station");
+System.IO.File.WriteAllLines("output/human-scale/setup.txt",report);
+UnityEditor.Selection.activeGameObject=player;
+return string.Join("\n",report);

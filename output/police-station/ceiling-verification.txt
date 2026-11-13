@@ -1,0 +1,7 @@
+PASS: 4 room ceilings; 23 realtime light sources; 46 emissive fluorescent tubes; no Rigidbody.
+Skipped wall-overlapping fixture: Main office (-5.22, 3.12, -2.95)
+Skipped wall-overlapping fixture: Main office (-5.22, 3.12, 5.91)
+Main office: ceiling footprint=(14.58, 0.14, 13.29), underside=3,12
+Meeting room: ceiling footprint=(12.13, 0.13, 7.24), underside=3,12
+Side office: ceiling footprint=(9.72, 0.13, 7.24), underside=3,12
+Reception: ceiling footprint=(9.72, 0.14, 12.09), underside=3,12

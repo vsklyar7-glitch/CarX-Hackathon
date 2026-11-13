@@ -1,0 +1,7 @@
+imagecheck scale=0,8 position=(0.00, 0.00, 0.00)
+americannredotoday1 scale=0,15 position=(-142.60, 0.00, 23.60)
+Basement scale=0,25 position=(-77.09, -3.07, -22.82)
+imagecheck PlayerSpawn=(0.4091, -0.0099, 1.1825) floor=DetectiveSchool
+americannredotoday1 PlayerSpawn=(-139.7717, 0.0400, 23.0310) floor=pPlane9
+Basement PlayerSpawn=(-77.0900, -3.0346, -23.3200) floor=body
+Player: height=1.8m; eye height=1.65m; radius=0.28m; step=0.28m; walk=1.5m/s; run=3.5m/s; start=police station

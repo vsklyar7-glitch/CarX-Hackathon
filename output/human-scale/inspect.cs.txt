@@ -1,0 +1,29 @@
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+var lines = new System.Collections.Generic.List<string>();
+foreach (var root in scene.GetRootGameObjects())
+{
+    if (root.name != "imagecheck" && root.name != "americannredotoday1" && root.name != "Basement") continue;
+    var renderers = root.GetComponentsInChildren<UnityEngine.Renderer>(true);
+    var bounds = renderers[0].bounds;
+    foreach (var r in renderers) bounds.Encapsulate(r.bounds);
+    lines.Add("ROOT " + root.name + " | world=" + bounds.ToString("F3") + " | colliders=" + root.GetComponentsInChildren<UnityEngine.Collider>(true).Length);
+    foreach (var r in renderers)
+    {
+        var name = r.name.ToLowerInvariant();
+        bool relevant = name.Contains("door") || name.Contains("desk") || name.Contains("chair") || name.Contains("table") || name.Contains("bed") || name.Contains("ground") || name.Contains("floor") || name.Contains("stair") || name.Contains("wall") || name.Contains("human") || name.Contains("body") || name.Contains("head") || name.Contains("arm") || name.Contains("ceiling") || name.Contains("pplane") || r is UnityEngine.SkinnedMeshRenderer;
+        if (root.name == "Basement") relevant = true;
+        if (!relevant) continue;
+        lines.Add(root.name + "/" + r.name + " | active=" + r.gameObject.activeInHierarchy + " | center=" + root.transform.InverseTransformPoint(r.bounds.center).ToString("F4") + " | worldSize=" + r.bounds.size.ToString("F4") + " | material=" + string.Join(",",System.Linq.Enumerable.Select(r.sharedMaterials,m=>m ? m.name : "MISSING")));
+    }
+}
+foreach(var controller in UnityEngine.Object.FindObjectsByType<UnityEngine.CharacterController>(UnityEngine.FindObjectsInactive.Include,UnityEngine.FindObjectsSortMode.None)) lines.Add("CHARACTER " + controller.name + " | height=" + controller.height + " | radius="+controller.radius+" | center="+controller.center + " | scale="+controller.transform.lossyScale);
+var playerPrefab = UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.GameObject>("Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab");
+if(playerPrefab)
+{
+    var cc=playerPrefab.GetComponent<UnityEngine.CharacterController>();
+    var pc=playerPrefab.GetComponent<PlayerController>();
+    lines.Add("PLAYER PREFAB | height="+cc.height+" radius="+cc.radius+" center="+cc.center+" walk="+pc.walkSpeed+" run="+pc.runSpeed+" camera="+pc.playerCamera.localPosition+" | rootScale="+playerPrefab.transform.localScale);
+}
+System.IO.Directory.CreateDirectory("output/human-scale");
+System.IO.File.WriteAllLines("output/human-scale/measurements-before.txt",lines);
+return string.Join("\n",System.Linq.Enumerable.Where(lines,l=>l.StartsWith("ROOT")||l.StartsWith("PLAYER")||l.StartsWith("CHARACTER")));

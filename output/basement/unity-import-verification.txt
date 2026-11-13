@@ -1,0 +1,1 @@
+PASS: Assets/Prefabs/basement/Basement.prefab | renderers=44 | mesh colliders=42 | material slots=71 | new URP materials=50 | mapped textures=47 | bounds=Center: (0.03, 7.11, 2.34), Extents: (11.15, 8.65, 18.24)
