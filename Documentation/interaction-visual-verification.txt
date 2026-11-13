@@ -1,0 +1,1 @@
+PASS: graphics-enabled Unity rendered both views; complete Russian glyph set added to atlas.

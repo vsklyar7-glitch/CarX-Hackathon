@@ -1,0 +1,3 @@
+PASS — Unity 6000.6.8f1 Play Mode
+8 unique evidence items; camera targeting; wall occlusion; distance limit; movement/camera lock across frames; close button; duplicate prevention; single evidence event; external control lock.
+Note: Unity Editor Search emitted an internal ArgumentOutOfRangeException during startup indexing. Its stack contains UnityEditor.Search only; gameplay assertions completed PASS.

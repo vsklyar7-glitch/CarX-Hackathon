@@ -1,95 +1,82 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+// Контроллер Дениса: сохранены имя класса, поля и CharacterController.
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 2.2f;
     public float runSpeed = 3.5f;
-
     public float gravity = -9.81f;
-
     public Transform playerCamera;
     public float mouseSensitivity = 2f;
 
     private CharacterController controller;
     private float verticalVelocity;
-    private float cameraRotationX = 0f;
+    private float cameraRotationX;
+    private int blockedThroughFrame = -1;
+    public bool ControlsBlocked { get; private set; }
 
-    void Start()
+    private void Awake()
     {
         controller = GetComponent<CharacterController>();
-
-        // Блокируем курсор и прячем его
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    void Update()
-    {
-        Move();
-        Look();
-
-        // Esc, чтобы освободить мышь
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (playerCamera == null)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-
-        // Левая кнопка мыши, чтобы захватить курсор
-        if (Input.GetMouseButtonDown(0))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            Camera childCamera = GetComponentInChildren<Camera>();
+            if (childCamera != null) playerCamera = childCamera.transform;
         }
     }
 
-    void Move()
+    private void Start()
     {
-        // Получаем нажатия клавиш
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        if (!ControlsBlocked) SetCursor(true);
+    }
 
-        // Направление движения относительно персонажа
-        Vector3 move = transform.right * x + transform.forward * z;
-        move = Vector3.ClampMagnitude(move, 1f);
+    private void Update()
+    {
+        if (ControlsBlocked || Time.frameCount <= blockedThroughFrame) return;
+        Keyboard keyboard = Keyboard.current;
+        Mouse mouse = Mouse.current;
+        if (keyboard != null && keyboard.escapeKey.wasPressedThisFrame) SetCursor(false);
+        else if (mouse != null && mouse.leftButton.wasPressedThisFrame) SetCursor(true);
 
-        // Обычная ходьба или бег
-        float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-
-        // Применяем движение
-        controller.Move(move * speed * Time.deltaTime);
-
-        // Гравитация
-        if (controller.isGrounded && verticalVelocity < 0f)
+        bool captured = Cursor.lockState == CursorLockMode.Locked;
+        Vector2 input = Vector2.zero;
+        if (captured && keyboard != null)
         {
-            verticalVelocity = -2f;
+            input.x = (keyboard.dKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed ? 1 : 0);
+            input.y = (keyboard.wKey.isPressed ? 1 : 0) - (keyboard.sKey.isPressed ? 1 : 0);
         }
-
+        input = Vector2.ClampMagnitude(input, 1f);
+        float speed = keyboard != null && keyboard.leftShiftKey.isPressed ? runSpeed : walkSpeed;
+        Vector3 movement = (transform.right * input.x + transform.forward * input.y) * speed;
+        if (controller.isGrounded && verticalVelocity < 0f) verticalVelocity = -2f;
         verticalVelocity += gravity * Time.deltaTime;
+        movement.y = verticalVelocity;
+        if (controller.enabled) controller.Move(movement * Time.deltaTime);
 
-        controller.Move(
-            Vector3.up * verticalVelocity * Time.deltaTime
-        );
+        if (!captured || mouse == null || playerCamera == null) return;
+        // Mouse.delta уже содержит смещение за кадр, умножать на deltaTime не нужно.
+        Vector2 look = mouse.delta.ReadValue() * (mouseSensitivity * 0.08f);
+        transform.Rotate(Vector3.up * look.x);
+        cameraRotationX = Mathf.Clamp(cameraRotationX - look.y, -80f, 80f);
+        playerCamera.localRotation = Quaternion.Euler(cameraRotationX, 0f, 0f);
     }
 
-    void Look()
+    public void SetControlsBlocked(bool blocked)
     {
-        // Если мышь свободна, не вращаем камеру
-        if (Cursor.lockState != CursorLockMode.Locked)
-            return;
+        ControlsBlocked = blocked;
+        if (!blocked) blockedThroughFrame = Time.frameCount;
+    }
 
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+    private void OnDisable()
+    {
+        SetCursor(false);
+    }
 
-        // Поворот персонажа влево и вправо
-        transform.Rotate(Vector3.up * mouseX);
-
-        // Поворот камеры вверх и вниз
-        cameraRotationX -= mouseY;
-        cameraRotationX = Mathf.Clamp(cameraRotationX, -80f, 80f);
-
-        playerCamera.localRotation =
-            Quaternion.Euler(cameraRotationX, 0f, 0f);
+    private static void SetCursor(bool captured)
+    {
+        Cursor.lockState = captured ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !captured;
     }
 }
