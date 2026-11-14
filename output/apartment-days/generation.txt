@@ -1,0 +1,3 @@
+Assets/Scenes/Day1.unity: 3 unique clues; source=InteractionDemo; player, colliders, atmosphere, door pose checked
+Assets/Scenes/Day2.unity: 5 unique clues; source=InteractionDemo; player, colliders, atmosphere, door pose checked
+Assets/Scenes/Day3.unity: 7 unique clues; source=InteractionDemo; player, colliders, atmosphere, door pose checked
