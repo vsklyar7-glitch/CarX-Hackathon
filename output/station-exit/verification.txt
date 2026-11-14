@@ -1,0 +1,7 @@
+PASS: Unity Play Mode.
+Grounded spawn at CubeStart.
+Both door zones return StationExit.
+Both exits transfer through E-key Input System events to apartment PlayerSpawn.
+External control lock prevents interaction.
+Arrival grounded, prompt empty, distance from spawn 0.015 m after settling.
+Scene2 saved, Edit Mode, compilation successful.

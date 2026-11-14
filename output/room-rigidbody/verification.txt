@@ -1,0 +1,1 @@
+{ frame = 3618, count = 282, allKinematic = True, floorAndDoorsStatic = True, playerHasNoRigidbody = True, compileFailed = False }

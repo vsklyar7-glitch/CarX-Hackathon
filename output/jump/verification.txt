@@ -1,0 +1,1 @@
+FAIL; rise=0; grounded=True; blockedJumpDelta=0; frames=6499

@@ -10,6 +10,7 @@ public class PlayerInteraction : MonoBehaviour
     [Min(0.1f)] public float interactionDistance = 2.2f;
     // Маска включает стены и мебель: первый непрозрачный коллайдер перекрывает улику.
     public LayerMask raycastMask = Physics.DefaultRaycastLayers;
+    public StationExit[] nearbyExits;
     private PlayerController controller;
     private IInteractable target;
     private bool modalOpen;
@@ -52,6 +53,9 @@ public class PlayerInteraction : MonoBehaviour
     public IInteractable FindTarget()
     {
         if (playerCamera == null) return null;
+        if (nearbyExits != null)
+            foreach (StationExit exit in nearbyExits)
+                if (exit != null && exit.isActiveAndEnabled && exit.IsNearby(this)) return exit;
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         // Игнорируем только коллайдеры своего игрока; стены остаются препятствиями.
         RaycastHit[] hits = Physics.RaycastAll(ray, interactionDistance, raycastMask, QueryTriggerInteraction.Ignore);

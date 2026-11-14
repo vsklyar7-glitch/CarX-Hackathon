@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 1.5f;
     public float runSpeed = 3.5f;
     public float gravity = -9.81f;
+    [Min(0f)] public float jumpHeight = 0.45f;
+    [Min(1f), Tooltip("Масса в кг: влияет на толкание подвижных Rigidbody. Не меняет высоту прыжка.")]
+    public float mass = 70f;
     public Transform playerCamera;
     public float mouseSensitivity = 2f;
 
@@ -51,9 +54,17 @@ public class PlayerController : MonoBehaviour
         float speed = keyboard != null && keyboard.leftShiftKey.isPressed ? runSpeed : walkSpeed;
         Vector3 movement = (transform.right * input.x + transform.forward * input.y) * speed;
         if (controller.isGrounded && verticalVelocity < 0f) verticalVelocity = -2f;
+        if (captured && keyboard != null && keyboard.spaceKey.wasPressedThisFrame
+            && controller.isGrounded && gravity < 0f)
+            verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
         verticalVelocity += gravity * Time.deltaTime;
         movement.y = verticalVelocity;
-        if (controller.enabled) controller.Move(movement * Time.deltaTime);
+        if (controller.enabled)
+        {
+            CollisionFlags collisions = controller.Move(movement * Time.deltaTime);
+            if ((collisions & CollisionFlags.Above) != 0 && verticalVelocity > 0f)
+                verticalVelocity = 0f;
+        }
 
         if (!captured || mouse == null || playerCamera == null) return;
         // Mouse.delta уже содержит смещение за кадр, умножать на deltaTime не нужно.
@@ -67,6 +78,31 @@ public class PlayerController : MonoBehaviour
     {
         ControlsBlocked = blocked;
         if (!blocked) blockedThroughFrame = Time.frameCount;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody body = hit.rigidbody;
+        if (ControlsBlocked || body == null || body.isKinematic || hit.moveDirection.y < -0.3f) return;
+        Vector3 direction = new Vector3(hit.moveDirection.x, 0f, hit.moveDirection.z);
+        Vector3 velocity = controller.velocity;
+        float speed = new Vector2(velocity.x, velocity.z).magnitude;
+        body.AddForceAtPosition(direction.normalized * mass * speed, hit.point, ForceMode.Force);
+    }
+
+    public void Teleport(Transform destination)
+    {
+        if (destination == null) return;
+        if (controller == null) controller = GetComponent<CharacterController>();
+        bool wasEnabled = controller.enabled;
+        controller.enabled = false;
+        transform.SetPositionAndRotation(destination.position, destination.rotation);
+        verticalVelocity = 0f;
+        cameraRotationX = 0f;
+        if (playerCamera != null) playerCamera.localRotation = Quaternion.identity;
+        controller.enabled = wasEnabled;
+        Physics.SyncTransforms();
+        blockedThroughFrame = Time.frameCount;
     }
 
     private void OnDisable()

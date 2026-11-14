@@ -1,0 +1,1 @@
+{ grounded = True, position = (-98.48, 0.02, -13.28), eye = 1,45, frame = 11364, compilationFailed = False }; Exit transfer and empty capsule overlap check passed; doorway and corridor renders verified.

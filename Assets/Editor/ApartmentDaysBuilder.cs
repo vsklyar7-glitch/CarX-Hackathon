@@ -87,6 +87,7 @@ public static class ApartmentDaysBuilder
                     var fill=new GameObject("Readable room fill",typeof(Light));fill.transform.position=new Vector3(table.center.x,2.2f,table.center.z);var fillLight=fill.GetComponent<Light>();fillLight.type=LightType.Point;fillLight.range=7;fillLight.intensity=day==1?1.1f:.55f;fillLight.color=day==1?new Color(1,.84f,.65f):new Color(.65f,.75f,1);
                     var depthLight=new GameObject("Light from basement",typeof(Light));depthLight.transform.SetParent(door.transform,false);depthLight.transform.localPosition=new Vector3(0,.4f,.25f);var dl=depthLight.GetComponent<Light>();dl.type=LightType.Point;dl.range=2;dl.color=new Color(1,.19f,.06f);dl.intensity=day==3?1.2f:0;
                     atmosphere.roomLights=existing.Concat(new[]{fillLight,dl}).Where(l=>l.intensity>0).ToArray();
+                    UseExistingBasementDoor(flat,door.transform,day);
                     RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=day==1?new Color(.18f,.17f,.15f):new Color(.09f,.11f,.15f);
                     var player=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab"),scene);
                     var spawn=flat.transform.Find("PlayerSpawn");
@@ -109,6 +110,35 @@ public static class ApartmentDaysBuilder
         }
         finally{SceneManager.SetActiveScene(previous);EditorSceneManager.CloseScene(demo,true);EditorSceneManager.CloseScene(source,true);}
     }
+    // Переносит оформление на штатную дверь, сохраняя её материал и ручку.
+    public static void UseExistingBasementDoor(GameObject flat,Transform threshold,int day)
+    {
+        if(threshold.name=="Basement door 17") return;
+        var leaf=flat.GetComponentsInChildren<MeshRenderer>(true).Single(r=>r.name=="pCube217");
+        var handle=flat.GetComponentsInChildren<MeshRenderer>(true).Single(r=>r.name=="pCube343");
+        var bounds=leaf.bounds;
+        foreach(string name in new[]{"Left jamb","Right jamb","Lintel","Door hinge"})
+        {
+            var part=threshold.Find(name);
+            if(part) UnityEngine.Object.DestroyImmediate(part.gameObject);
+        }
+        threshold.name="Basement door 17";
+        threshold.position=new Vector3(bounds.center.x,bounds.min.y,bounds.center.z);
+        threshold.rotation=Quaternion.identity;
+        var hinge=new GameObject("Door hinge").transform;
+        hinge.SetParent(threshold,false);
+        hinge.localPosition=new Vector3(-bounds.size.x*.5f,0,0);
+        leaf.transform.SetParent(hinge,true);
+        handle.transform.SetParent(leaf.transform,true);
+        var darkness=threshold.Find("Darkness beyond door");
+        darkness.localPosition=new Vector3(0,bounds.size.y*.5f,-.065f);
+        darkness.localScale=new Vector3(bounds.size.x+.015f,bounds.size.y,.025f);
+        var number=threshold.Find("Door number");
+        number.SetParent(hinge,false);
+        number.localPosition=new Vector3(bounds.size.x*.5f,bounds.size.y*.83f,.075f);
+        if(day==3) hinge.localRotation=Quaternion.Euler(0,-68,0);
+    }
+
     private static GameObject Clue(System.Collections.Generic.Dictionary<string,EvidenceItem> sources,string id,Transform parent,Vector3 position,float yaw)
     {
         var go=UnityEngine.Object.Instantiate(sources[id].gameObject);go.name=sources[id].gameObject.name;go.transform.SetParent(parent,true);go.transform.position=position;go.transform.rotation=Quaternion.Euler(0,yaw,0);go.transform.localScale=Vector3.one;return go;
