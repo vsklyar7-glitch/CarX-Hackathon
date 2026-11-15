@@ -1,0 +1,4 @@
+Assets/Scenes/Scene2.unity: day=0; clues=case_file
+Assets/Scenes/Day1.unity: day=1; clues=family_photo,electricity_receipt,basement_key_17
+Assets/Scenes/Day2.unity: day=2; clues=family_photo,electricity_receipt,basement_key_17,dmitry_diary,ivan_letter
+Assets/Scenes/Day3.unity: day=3; clues=family_photo,electricity_receipt,basement_key_17,dmitry_diary,ivan_letter,child_drawing,father_note

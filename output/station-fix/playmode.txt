@@ -1,0 +1,5 @@
+PASS: station has one player/camera, grounded spawn, WASD moves 0,54m.
+PASS: E loads Day1; all three clues reachable by camera ray, key selectable.
+PASS: station -> Day2; diary and letter reachable; journal preserved.
+PASS: Day3 retains all eight unique clues and E does not return to station.
+PASS

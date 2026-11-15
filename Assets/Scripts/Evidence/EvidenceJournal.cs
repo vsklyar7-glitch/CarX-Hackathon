@@ -20,6 +20,7 @@ public class EvidenceJournal : MonoBehaviour
         public Sprite image;
     }
     public int Count => entries.Count;
+    public int ApartmentDay { get; private set; } = 1;
     public IEnumerable<string> Titles => entries.Values;
 
     public static EvidenceJournal GetOrCreate()
@@ -45,6 +46,8 @@ public class EvidenceJournal : MonoBehaviour
     }
 
     public bool Contains(string id) => entries.ContainsKey(id);
+
+    public void SetApartmentDay(int day) => ApartmentDay = Mathf.Clamp(day, 1, 3);
 
     public bool Add(EvidenceItem item)
     {

@@ -1,0 +1,29 @@
+# Keep Unity, code and documents consistent across Windows and other platforms.
+* text=auto eol=lf
+
+# Windows command scripts use their native line endings.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Imported binary assets must never undergo line-ending conversion.
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.bmp -text
+*.tga -text
+*.psd -text
+*.exr -text
+*.hdr -text
+*.fbx -text
+*.blend -text
+*.ttf -text
+*.otf -text
+*.wav -text
+*.mp3 -text
+*.ogg -text
+*.mp4 -text
+*.dll -text
+*.zip -text
+*.7z -text
+*.unitypackage -text

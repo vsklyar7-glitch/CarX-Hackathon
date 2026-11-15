@@ -88,6 +88,7 @@ public static class ApartmentDaysBuilder
                     var depthLight=new GameObject("Light from basement",typeof(Light));depthLight.transform.SetParent(door.transform,false);depthLight.transform.localPosition=new Vector3(0,.4f,.25f);var dl=depthLight.GetComponent<Light>();dl.type=LightType.Point;dl.range=2;dl.color=new Color(1,.19f,.06f);dl.intensity=day==3?1.2f:0;
                     atmosphere.roomLights=existing.Concat(new[]{fillLight,dl}).Where(l=>l.intensity>0).ToArray();
                     UseExistingBasementDoor(flat,door.transform,day);
+                    ApartmentKitchenLighting.Apply(scene,day);
                     RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=day==1?new Color(.18f,.17f,.15f):new Color(.09f,.11f,.15f);
                     var player=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab"),scene);
                     var spawn=flat.transform.Find("PlayerSpawn");
@@ -137,6 +138,7 @@ public static class ApartmentDaysBuilder
         number.SetParent(hinge,false);
         number.localPosition=new Vector3(bounds.size.x*.5f,bounds.size.y*.83f,.075f);
         if(day==3) hinge.localRotation=Quaternion.Euler(0,-68,0);
+        ApartmentDoorNumbers.Attach(threshold);
     }
 
     private static GameObject Clue(System.Collections.Generic.Dictionary<string,EvidenceItem> sources,string id,Transform parent,Vector3 position,float yaw)
