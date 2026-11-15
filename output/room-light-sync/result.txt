@@ -1,0 +1,10 @@
+Day2/lightbulb1: source=Day1; intensity preserved=0,28; type=Spot; enabled=True; spotAngle=100; range=4.
+Day2/lightbulb2: source=Day1; intensity preserved=0,28; type=Spot; enabled=True; spotAngle=100; range=4.
+Day2/lightbulb3: source=Day1; intensity preserved=0,28; type=Spot; enabled=True; spotAngle=100; range=4.
+Day2/lightbulb4: source=Day1; intensity preserved=0,28; type=Spot; enabled=True; spotAngle=100; range=4.
+Day2/lightbulb5: source=Day1; intensity preserved=0,28; type=Spot; enabled=True; spotAngle=100; range=4.
+Day3/lightbulb1: source=Day1; intensity preserved=0,12; type=Spot; enabled=True; spotAngle=100; range=4.
+Day3/lightbulb2: source=Day1; intensity preserved=0,12; type=Spot; enabled=True; spotAngle=100; range=4.
+Day3/lightbulb3: source=Day1; intensity preserved=0,12; type=Spot; enabled=True; spotAngle=100; range=4.
+Day3/lightbulb4: source=Day1; intensity preserved=0,12; type=Spot; enabled=True; spotAngle=100; range=4.
+Day3/lightbulb5: source=Day1; intensity preserved=0,12; type=Spot; enabled=True; spotAngle=100; range=4.

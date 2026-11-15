@@ -1,0 +1,68 @@
+if (UnityEditor.EditorApplication.isPlaying) throw new System.Exception("Stop Play Mode first.");
+var sourceScene = UnityEngine.SceneManagement.SceneManager.GetSceneByPath("Assets/Scenes/Day1.unity");
+bool openedSource = !sourceScene.isLoaded;
+if (openedSource) sourceScene = UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/Scenes/Day1.unity", UnityEditor.SceneManagement.OpenSceneMode.Additive);
+var report = new System.Collections.Generic.List<string>();
+try
+{
+    var sourceFlat = sourceScene.GetRootGameObjects().Single(g => g.name.StartsWith("americannredotoday"));
+    var sources = sourceFlat.GetComponentsInChildren<UnityEngine.Light>(true).Where(l => l.name.StartsWith("lightbulb")).ToDictionary(l => l.name);
+    if (sources.Count != 5) throw new System.Exception("Expected five room bulbs in Day1.");
+    for (int day = 2; day <= 3; day++)
+    {
+        var path = "Assets/Scenes/Day" + day + ".unity";
+        var scene = UnityEngine.SceneManagement.SceneManager.GetSceneByPath(path);
+        bool opened = !scene.isLoaded;
+        if (opened) scene = UnityEditor.SceneManagement.EditorSceneManager.OpenScene(path, UnityEditor.SceneManagement.OpenSceneMode.Additive);
+        try
+        {
+            var flat = scene.GetRootGameObjects().Single(g => g.name.StartsWith("americannredotoday"));
+            var targets = flat.GetComponentsInChildren<UnityEngine.Light>(true).Where(l => l.name.StartsWith("lightbulb")).ToDictionary(l => l.name);
+            foreach (var pair in sources)
+            {
+                var source = pair.Value;
+                var target = targets[pair.Key];
+                float intensity = target.intensity;
+                UnityEditor.Undo.RecordObject(target, "Copy room bulb settings except intensity");
+                UnityEditor.Undo.RecordObject(target.transform, "Copy room bulb transform");
+                UnityEditor.Undo.RecordObject(target.gameObject, "Copy room bulb active state");
+                UnityEditor.EditorUtility.CopySerialized(source, target);
+                target.intensity = intensity;
+                target.transform.localPosition = source.transform.localPosition;
+                target.transform.localRotation = source.transform.localRotation;
+                target.transform.localScale = source.transform.localScale;
+                target.gameObject.SetActive(source.gameObject.activeSelf);
+                foreach (var component in source.GetComponents<UnityEngine.Component>())
+                {
+                    if (component is UnityEngine.Transform || component is UnityEngine.Light || component == null) continue;
+                    var destination = target.GetComponent(component.GetType());
+                    if (destination == null) destination = UnityEditor.Undo.AddComponent(target.gameObject, component.GetType());
+                    UnityEditor.Undo.RecordObject(destination, "Copy additional light settings");
+                    UnityEditor.EditorUtility.CopySerialized(component, destination);
+                    UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(destination);
+                }
+                UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(target);
+                UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(target.transform);
+                UnityEditor.PrefabUtility.RecordPrefabInstancePropertyModifications(target.gameObject);
+                if (!UnityEngine.Mathf.Approximately(target.intensity, intensity)) throw new System.Exception("Intensity changed: " + target.name);
+                if (target.type != source.type || target.enabled != source.enabled || target.color != source.color
+                    || !UnityEngine.Mathf.Approximately(target.spotAngle, source.spotAngle)
+                    || !UnityEngine.Mathf.Approximately(target.range, source.range))
+                    throw new System.Exception("Light settings mismatch: " + target.name);
+                report.Add("Day" + day + "/" + target.name + ": source=Day1; intensity preserved=" + intensity
+                    + "; type=" + target.type + "; enabled=" + target.enabled
+                    + "; spotAngle=" + target.spotAngle + "; range=" + target.range + ".");
+            }
+            var atmosphere = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<ApartmentDayAtmosphere>(true)).Single();
+            atmosphere.roomLights = atmosphere.roomLights.Where(l => l != null).Concat(targets.Values)
+                .Where(l => l.enabled && l.intensity > 0).Distinct().ToArray();
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+            UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+        }
+        finally { if (opened) UnityEditor.SceneManagement.EditorSceneManager.CloseScene(scene, true); }
+    }
+    UnityEditor.AssetDatabase.SaveAssets();
+}
+finally { if (openedSource) UnityEditor.SceneManagement.EditorSceneManager.CloseScene(sourceScene, true); }
+System.IO.File.WriteAllLines("output/room-light-sync/result.txt", report);
+return report;

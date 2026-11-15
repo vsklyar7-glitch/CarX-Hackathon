@@ -1,0 +1,2 @@
+Day2: pCylinder146/tvscreen -> bright white Unlit; constant white glow outside flicker list.
+Day3: pCylinder146/tvscreen -> bright white Unlit; constant white glow outside flicker list.

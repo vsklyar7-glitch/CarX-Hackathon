@@ -1,0 +1,4 @@
+PASS serialized setup: Assets/Scenes/Scene2.unity; day=0; evidence=1; required=0; return=False
+PASS serialized setup: Assets/Scenes/Day1.unity; day=1; evidence=3; required=3; return=True
+PASS serialized setup: Assets/Scenes/Day2.unity; day=2; evidence=5; required=5; return=True
+PASS serialized setup: Assets/Scenes/Day3.unity; day=3; evidence=7; required=7; return=False

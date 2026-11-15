@@ -1,0 +1,952 @@
+Text files examined: 996
+Files normalized: 947
+Binary/generated/protected files skipped: 166
+Content preserved except line endings; no Git staging or global config changes.
+
+output/door-number/README.md
+output/investigation-days/README.md
+output/investigation-days/editor-verification.txt
+output/investigation-days/setup.txt
+output/kitchen-light/README.md
+output/kitchen-light/editor-verification.txt
+output/line-endings/normalize.ps1
+output/room-light-sync/apply.cs.txt
+output/room-light-sync/result.txt
+output/station-fix/README.md
+output/station-fix/playmode.txt
+output/tv-screen/setup.txt
+.gitignore
+.vsconfig
+AGENTS.md
+AgentScripts/EvidenceRealismBuilder.cs
+AgentScripts/EvidenceRealismPreview.cs
+AgentScripts/PoseEvidencePreview.cs
+AgentScripts/VerifyEvidenceImages.cs
+AgentScripts/VerifyEvidenceRealism.cs
+AgentScripts/VerifyNotebook.cs
+AgentScripts/VerifyNotebookModal.cs
+AgentScripts/VerifyNotebookTransfer.cs
+AgentScripts/VerifyNotebookTurning.cs
+Assets/ApartmentDays.meta
+Assets/ApartmentDays/Day3BasementBody.asset
+Assets/ApartmentDays/Day3BasementBody.asset.meta
+Assets/ApartmentDays/Day3Basement_body.002_Collision.asset
+Assets/ApartmentDays/Day3Basement_body.002_Collision.asset.meta
+Assets/ApartmentDays/Day3Basement_skinlessbody_Collision.asset
+Assets/ApartmentDays/Day3Basement_skinlessbody_Collision.asset.meta
+Assets/ApartmentDays/Materials.meta
+Assets/ApartmentDays/Materials/AgedPaper.mat
+Assets/ApartmentDays/Materials/AgedPaper.mat.meta
+Assets/ApartmentDays/Materials/DepthBlack.mat
+Assets/ApartmentDays/Materials/DepthBlack.mat.meta
+Assets/ApartmentDays/Materials/DoorWood.mat
+Assets/ApartmentDays/Materials/DoorWood.mat.meta
+Assets/ApartmentDays/Materials/RedMarks.mat
+Assets/ApartmentDays/Materials/RedMarks.mat.meta
+Assets/Editor.meta
+Assets/Editor/ApartmentDaysBuilder.cs
+Assets/Editor/ApartmentDaysBuilder.cs.meta
+Assets/Editor/Day3BasementSetup.cs
+Assets/Editor/Day3BasementSetup.cs.meta
+Assets/Editor/InteractionContentBuilder.cs
+Assets/Editor/InteractionContentBuilder.cs.meta
+Assets/Editor/InteractionVerification.cs
+Assets/Editor/InteractionVerification.cs.meta
+Assets/Editor/NotebookBuilder.cs
+Assets/Editor/NotebookBuilder.cs.meta
+Assets/Editor/PlayerSpawnTools.cs
+Assets/Editor/PlayerSpawnTools.cs.meta
+Assets/EvidenceRealism.meta
+Assets/EvidenceRealism/Materials.meta
+Assets/EvidenceRealism/Materials/DarkWoodFrame.mat
+Assets/EvidenceRealism/Materials/DarkWoodFrame.mat.meta
+Assets/EvidenceRealism/Materials/FadedInk.mat
+Assets/EvidenceRealism/Materials/FadedInk.mat.meta
+Assets/EvidenceRealism/Materials/FadedRed.mat
+Assets/EvidenceRealism/Materials/FadedRed.mat.meta
+Assets/EvidenceRealism/Materials/FamilyPhotograph.mat
+Assets/EvidenceRealism/Materials/FamilyPhotograph.mat.meta
+Assets/EvidenceRealism/Materials/OxBloodLeather.mat
+Assets/EvidenceRealism/Materials/OxBloodLeather.mat.meta
+Assets/EvidenceRealism/Materials/PageEdges.mat
+Assets/EvidenceRealism/Materials/PageEdges.mat.meta
+Assets/EvidenceRealism/Materials/PaperclipSteel.mat
+Assets/EvidenceRealism/Materials/PaperclipSteel.mat.meta
+Assets/EvidenceRealism/Materials/TarnishedBrass.mat
+Assets/EvidenceRealism/Materials/TarnishedBrass.mat.meta
+Assets/EvidenceRealism/Materials/WornPaper.mat
+Assets/EvidenceRealism/Materials/WornPaper.mat.meta
+Assets/EvidenceRealism/Meshes.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,007_0,004_0,0045_0,0007.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,007_0,004_0,0045_0,0007.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,009_0,004_0,068_0,001.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,009_0,004_0,068_0,001.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,011_0,004_0,0045_0,0007.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,011_0,004_0,0045_0,0007.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,012_0,009_0,275_0,002.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,012_0,009_0,275_0,002.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,012_0,029_0,235_0,004.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,012_0,029_0,235_0,004.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,034_0,001_0,05_0,004.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,034_0,001_0,05_0,004.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,065_0,00025_0,14_0,001.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,065_0,00025_0,14_0,001.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,07_0,002_0,025_0,003.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,07_0,002_0,025_0,003.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,162_0,018_0,224_0,003.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,162_0,018_0,224_0,003.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,175_0,006_0,24_0,005.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,175_0,006_0,24_0,005.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,175_0,007_0,24_0,005.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,175_0,007_0,24_0,005.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,19_0,002_0,12_0,002.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,19_0,002_0,12_0,002.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,222_0,0005_0,297_0,001.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,222_0,0005_0,297_0,001.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,237_0,001_0,257_0,001.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,237_0,001_0,257_0,001.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,24_0,009_0,012_0,002.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,24_0,009_0,012_0,002.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,255_0,015_0,275_0,005.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,255_0,015_0,275_0,005.asset.meta
+Assets/EvidenceRealism/Meshes/Bevel_0,25_0,003_0,33_0,004.asset
+Assets/EvidenceRealism/Meshes/Bevel_0,25_0,003_0,33_0,004.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_FadedInk.asset
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_FadedInk.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_PageEdges.asset
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_PageEdges.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_PaperclipSteel.asset
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_PaperclipSteel.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_TarnishedBrass.asset
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_TarnishedBrass.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_basement_key_17_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_case_file_PageEdges.asset
+Assets/EvidenceRealism/Meshes/Combined_case_file_PageEdges.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_case_file_PaperclipSteel.asset
+Assets/EvidenceRealism/Meshes/Combined_case_file_PaperclipSteel.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_case_file_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_case_file_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_child_drawing_FadedInk.asset
+Assets/EvidenceRealism/Meshes/Combined_child_drawing_FadedInk.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_child_drawing_FadedRed.asset
+Assets/EvidenceRealism/Meshes/Combined_child_drawing_FadedRed.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_child_drawing_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_child_drawing_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_FadedRed.asset
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_FadedRed.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_OxBloodLeather.asset
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_OxBloodLeather.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_PageEdges.asset
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_PageEdges.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_dmitry_diary_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_electricity_receipt_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_electricity_receipt_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_family_photo_DarkWoodFrame.asset
+Assets/EvidenceRealism/Meshes/Combined_family_photo_DarkWoodFrame.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_family_photo_FamilyPhotograph.asset
+Assets/EvidenceRealism/Meshes/Combined_family_photo_FamilyPhotograph.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_family_photo_PageEdges.asset
+Assets/EvidenceRealism/Meshes/Combined_family_photo_PageEdges.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_father_note_PageEdges.asset
+Assets/EvidenceRealism/Meshes/Combined_father_note_PageEdges.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_father_note_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_father_note_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_ivan_letter_PageEdges.asset
+Assets/EvidenceRealism/Meshes/Combined_ivan_letter_PageEdges.asset.meta
+Assets/EvidenceRealism/Meshes/Combined_ivan_letter_WornPaper.asset
+Assets/EvidenceRealism/Meshes/Combined_ivan_letter_WornPaper.asset.meta
+Assets/EvidenceRealism/Meshes/Ring_0,014_0,0012.asset
+Assets/EvidenceRealism/Meshes/Ring_0,014_0,0012.asset.meta
+Assets/EvidenceRealism/Meshes/Ring_0,015_0,0014.asset
+Assets/EvidenceRealism/Meshes/Ring_0,015_0,0014.asset.meta
+Assets/EvidenceRealism/Meshes/Ring_0,018_0,005.asset
+Assets/EvidenceRealism/Meshes/Ring_0,018_0,005.asset.meta
+Assets/EvidenceRealism/Meshes/Sheet_0,13_0,28_0,012.asset
+Assets/EvidenceRealism/Meshes/Sheet_0,13_0,28_0,012.asset.meta
+Assets/EvidenceRealism/Meshes/Sheet_0,215_0,215_0.asset
+Assets/EvidenceRealism/Meshes/Sheet_0,215_0,215_0.asset.meta
+Assets/EvidenceRealism/Meshes/Sheet_0,21_0,27_0,006.asset
+Assets/EvidenceRealism/Meshes/Sheet_0,21_0,27_0,006.asset.meta
+Assets/EvidenceRealism/Meshes/Sheet_0,21_0,28_0,008.asset
+Assets/EvidenceRealism/Meshes/Sheet_0,21_0,28_0,008.asset.meta
+Assets/EvidenceRealism/Meshes/Sheet_0,22_0,295_0,004.asset
+Assets/EvidenceRealism/Meshes/Sheet_0,22_0,295_0,004.asset.meta
+Assets/EvidenceRealism/Textures.meta
+Assets/EvidenceRealism/Textures/PaperGrain.png.meta
+Assets/EvidenceRealism/Textures/PaperGrainV2.png.meta
+Assets/Fonts.meta
+Assets/Fonts/MarckScript.meta
+Assets/Fonts/MarckScript/MarckScript-Regular.ttf.meta
+Assets/Fonts/MarckScript/NotebookHandwriting.asset
+Assets/Fonts/MarckScript/NotebookHandwriting.asset.meta
+Assets/Fonts/MarckScript/OFL.txt
+Assets/Fonts/MarckScript/OFL.txt.meta
+Assets/InputSystem_Actions.inputactions
+Assets/InputSystem_Actions.inputactions.meta
+Assets/InteractionContent.meta
+Assets/InteractionContent/InteractionDemo.unity
+Assets/InteractionContent/InteractionDemo.unity.meta
+Assets/InteractionContent/Materials.meta
+Assets/InteractionContent/Materials/AgedPaper.mat
+Assets/InteractionContent/Materials/AgedPaper.mat.meta
+Assets/InteractionContent/Materials/Ink.mat
+Assets/InteractionContent/Materials/Ink.mat.meta
+Assets/InteractionContent/Materials/LeatherAndFrame.mat
+Assets/InteractionContent/Materials/LeatherAndFrame.mat.meta
+Assets/InteractionContent/Materials/OldBrass.mat
+Assets/InteractionContent/Materials/OldBrass.mat.meta
+Assets/InteractionContent/Materials/RedMark.mat
+Assets/InteractionContent/Materials/RedMark.mat.meta
+Assets/InteractionContent/Prefabs.meta
+Assets/InteractionContent/Prefabs/BasementKey.prefab
+Assets/InteractionContent/Prefabs/BasementKey.prefab.meta
+Assets/InteractionContent/Prefabs/CaseFile.prefab
+Assets/InteractionContent/Prefabs/CaseFile.prefab.meta
+Assets/InteractionContent/Prefabs/ChildDrawing.prefab
+Assets/InteractionContent/Prefabs/ChildDrawing.prefab.meta
+Assets/InteractionContent/Prefabs/DmitryDiary.prefab
+Assets/InteractionContent/Prefabs/DmitryDiary.prefab.meta
+Assets/InteractionContent/Prefabs/FamilyPhoto.prefab
+Assets/InteractionContent/Prefabs/FamilyPhoto.prefab.meta
+Assets/InteractionContent/Prefabs/FatherNote.prefab
+Assets/InteractionContent/Prefabs/FatherNote.prefab.meta
+Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab
+Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab.meta
+Assets/InteractionContent/Prefabs/IvanLetter.prefab
+Assets/InteractionContent/Prefabs/IvanLetter.prefab.meta
+Assets/InteractionContent/Prefabs/Receipt.prefab
+Assets/InteractionContent/Prefabs/Receipt.prefab.meta
+Assets/InteractionContent/RussianFont.asset.meta
+Assets/Materials.meta
+Assets/Materials/PoliceStation.meta
+Assets/Materials/PoliceStation/Acoustic_ceiling.mat
+Assets/Materials/PoliceStation/Acoustic_ceiling.mat.meta
+Assets/Materials/PoliceStation/Ceiling_T_grid.mat
+Assets/Materials/PoliceStation/Ceiling_T_grid.mat.meta
+Assets/Materials/PoliceStation/DoorJambPaint.mat
+Assets/Materials/PoliceStation/DoorJambPaint.mat.meta
+Assets/Materials/PoliceStation/Fluorescent_enamel.mat
+Assets/Materials/PoliceStation/Fluorescent_enamel.mat.meta
+Assets/Materials/PoliceStation/Fluorescent_reflector.mat
+Assets/Materials/PoliceStation/Fluorescent_reflector.mat.meta
+Assets/Materials/PoliceStation/Warm_white_fluorescent.mat
+Assets/Materials/PoliceStation/Warm_white_fluorescent.mat.meta
+Assets/Materials/WindowFramePaint.mat
+Assets/Materials/WindowFramePaint.mat.meta
+Assets/Materials/WindowGlass.mat
+Assets/Materials/WindowGlass.mat.meta
+Assets/Prefabs.meta
+Assets/Prefabs/Materials.meta
+Assets/Prefabs/Materials/Chair___Table.mat
+Assets/Prefabs/Materials/Chair___Table.mat.meta
+Assets/Prefabs/Materials/Keybinds.mat
+Assets/Prefabs/Materials/Keybinds.mat.meta
+Assets/Prefabs/Materials/Keyboards.mat
+Assets/Prefabs/Materials/Keyboards.mat.meta
+Assets/Prefabs/Materials/Pc & Boxes_Keybinds_BaseColor.mat
+Assets/Prefabs/Materials/Pc & Boxes_Keybinds_BaseColor.mat.meta
+Assets/Prefabs/Materials/Pc.mat
+Assets/Prefabs/Materials/Pc.mat.meta
+Assets/Prefabs/Materials/Pc_Screen.mat
+Assets/Prefabs/Materials/Pc_Screen.mat.meta
+Assets/Prefabs/Materials/Pc_Screen1.mat
+Assets/Prefabs/Materials/Pc_Screen1.mat.meta
+Assets/Prefabs/Materials/Props.mat
+Assets/Prefabs/Materials/Props.mat.meta
+Assets/Prefabs/Materials/Wall___Column.mat
+Assets/Prefabs/Materials/Wall___Column.mat.meta
+Assets/Prefabs/Materials/lambert11.mat
+Assets/Prefabs/Materials/lambert11.mat.meta
+Assets/Prefabs/Materials/lambert13.mat
+Assets/Prefabs/Materials/lambert13.mat.meta
+Assets/Prefabs/Materials/lambert14.mat
+Assets/Prefabs/Materials/lambert14.mat.meta
+Assets/Prefabs/Materials/lambert15.mat
+Assets/Prefabs/Materials/lambert15.mat.meta
+Assets/Prefabs/Materials/lambert16.mat
+Assets/Prefabs/Materials/lambert16.mat.meta
+Assets/Prefabs/Materials/lambert3.mat
+Assets/Prefabs/Materials/lambert3.mat.meta
+Assets/Prefabs/Materials/lambert7.mat
+Assets/Prefabs/Materials/lambert7.mat.meta
+Assets/Prefabs/Materials/lambert8.mat
+Assets/Prefabs/Materials/lambert8.mat.meta
+Assets/Prefabs/Materials/lambert9.mat
+Assets/Prefabs/Materials/lambert9.mat.meta
+Assets/Prefabs/Materials/openPBR_shader4.mat
+Assets/Prefabs/Materials/openPBR_shader4.mat.meta
+Assets/Prefabs/Materials/standardSurface2.mat
+Assets/Prefabs/Materials/standardSurface2.mat.meta
+Assets/Prefabs/Materials/standardSurface3.mat
+Assets/Prefabs/Materials/standardSurface3.mat.meta
+Assets/Prefabs/Materials/standardSurface4.mat
+Assets/Prefabs/Materials/standardSurface4.mat.meta
+Assets/Prefabs/PoliceStation.meta
+Assets/Prefabs/PoliceStation/CeilingGrid0.asset
+Assets/Prefabs/PoliceStation/CeilingGrid0.asset.meta
+Assets/Prefabs/PoliceStation/CeilingGrid1.asset
+Assets/Prefabs/PoliceStation/CeilingGrid1.asset.meta
+Assets/Prefabs/PoliceStation/CeilingGrid2.asset
+Assets/Prefabs/PoliceStation/CeilingGrid2.asset.meta
+Assets/Prefabs/PoliceStation/CeilingGrid3.asset
+Assets/Prefabs/PoliceStation/CeilingGrid3.asset.meta
+Assets/Prefabs/PoliceStation/DoorwayWallInfill0.asset
+Assets/Prefabs/PoliceStation/DoorwayWallInfill0.asset.meta
+Assets/Prefabs/PoliceStation/DoorwayWallInfill1.asset
+Assets/Prefabs/PoliceStation/DoorwayWallInfill1.asset.meta
+Assets/Prefabs/apartments.meta
+Assets/Prefabs/apartments/materials.meta
+Assets/Prefabs/apartments/materials/360_F_184648654_RUU1LwSaRpgsBFq8DvW1gNIYeaVflDw3.mat
+Assets/Prefabs/apartments/materials/360_F_184648654_RUU1LwSaRpgsBFq8DvW1gNIYeaVflDw3.mat.meta
+Assets/Prefabs/apartments/materials/EQ7.mat
+Assets/Prefabs/apartments/materials/EQ7.mat.meta
+Assets/Prefabs/apartments/materials/FRAME.mat
+Assets/Prefabs/apartments/materials/FRAME.mat.meta
+Assets/Prefabs/apartments/materials/HIGHCHAIRR.mat
+Assets/Prefabs/apartments/materials/HIGHCHAIRR.mat.meta
+Assets/Prefabs/apartments/materials/LightMaterial.mat
+Assets/Prefabs/apartments/materials/LightMaterial.mat.meta
+Assets/Prefabs/apartments/materials/MANIMAGE.mat
+Assets/Prefabs/apartments/materials/MANIMAGE.mat.meta
+Assets/Prefabs/apartments/materials/WOMANIMAGE.mat
+Assets/Prefabs/apartments/materials/WOMANIMAGE.mat.meta
+Assets/Prefabs/apartments/materials/alarmtexture.mat
+Assets/Prefabs/apartments/materials/alarmtexture.mat.meta
+Assets/Prefabs/apartments/materials/amptexture.mat
+Assets/Prefabs/apartments/materials/amptexture.mat.meta
+Assets/Prefabs/apartments/materials/barstool.mat
+Assets/Prefabs/apartments/materials/barstool.mat.meta
+Assets/Prefabs/apartments/materials/barstoolcushion.mat
+Assets/Prefabs/apartments/materials/barstoolcushion.mat.meta
+Assets/Prefabs/apartments/materials/blackglossscreen.mat
+Assets/Prefabs/apartments/materials/blackglossscreen.mat.meta
+Assets/Prefabs/apartments/materials/blackimage.mat
+Assets/Prefabs/apartments/materials/blackimage.mat.meta
+Assets/Prefabs/apartments/materials/blinds.mat
+Assets/Prefabs/apartments/materials/blinds.mat.meta
+Assets/Prefabs/apartments/materials/blindstop.mat
+Assets/Prefabs/apartments/materials/blindstop.mat.meta
+Assets/Prefabs/apartments/materials/blinn32.mat
+Assets/Prefabs/apartments/materials/blinn32.mat.meta
+Assets/Prefabs/apartments/materials/blinn37.mat
+Assets/Prefabs/apartments/materials/blinn37.mat.meta
+Assets/Prefabs/apartments/materials/blinn38.mat
+Assets/Prefabs/apartments/materials/blinn38.mat.meta
+Assets/Prefabs/apartments/materials/blinn41.mat
+Assets/Prefabs/apartments/materials/blinn41.mat.meta
+Assets/Prefabs/apartments/materials/blinn8.mat
+Assets/Prefabs/apartments/materials/blinn8.mat.meta
+Assets/Prefabs/apartments/materials/bluecd.mat
+Assets/Prefabs/apartments/materials/bluecd.mat.meta
+Assets/Prefabs/apartments/materials/bookcolours.mat
+Assets/Prefabs/apartments/materials/bookcolours.mat.meta
+Assets/Prefabs/apartments/materials/bottledarkblue.mat
+Assets/Prefabs/apartments/materials/bottledarkblue.mat.meta
+Assets/Prefabs/apartments/materials/bottlegreen.mat
+Assets/Prefabs/apartments/materials/bottlegreen.mat.meta
+Assets/Prefabs/apartments/materials/cassettedecktexture.mat
+Assets/Prefabs/apartments/materials/cassettedecktexture.mat.meta
+Assets/Prefabs/apartments/materials/cdblack.mat
+Assets/Prefabs/apartments/materials/cdblack.mat.meta
+Assets/Prefabs/apartments/materials/cdboxtransparerent.mat
+Assets/Prefabs/apartments/materials/cdboxtransparerent.mat.meta
+Assets/Prefabs/apartments/materials/cdred.mat
+Assets/Prefabs/apartments/materials/cdred.mat.meta
+Assets/Prefabs/apartments/materials/cork.mat
+Assets/Prefabs/apartments/materials/cork.mat.meta
+Assets/Prefabs/apartments/materials/countertop.mat
+Assets/Prefabs/apartments/materials/countertop.mat.meta
+Assets/Prefabs/apartments/materials/frame2.mat
+Assets/Prefabs/apartments/materials/frame2.mat.meta
+Assets/Prefabs/apartments/materials/frame3.mat
+Assets/Prefabs/apartments/materials/frame3.mat.meta
+Assets/Prefabs/apartments/materials/frame4.mat
+Assets/Prefabs/apartments/materials/frame4.mat.meta
+Assets/Prefabs/apartments/materials/frame5.mat
+Assets/Prefabs/apartments/materials/frame5.mat.meta
+Assets/Prefabs/apartments/materials/frame6.mat
+Assets/Prefabs/apartments/materials/frame6.mat.meta
+Assets/Prefabs/apartments/materials/frame7.mat
+Assets/Prefabs/apartments/materials/frame7.mat.meta
+Assets/Prefabs/apartments/materials/frameglass.mat
+Assets/Prefabs/apartments/materials/frameglass.mat.meta
+Assets/Prefabs/apartments/materials/glasses.mat
+Assets/Prefabs/apartments/materials/glasses.mat.meta
+Assets/Prefabs/apartments/materials/glosswall.mat
+Assets/Prefabs/apartments/materials/glosswall.mat.meta
+Assets/Prefabs/apartments/materials/glossyscreen.mat
+Assets/Prefabs/apartments/materials/glossyscreen.mat.meta
+Assets/Prefabs/apartments/materials/greencd.mat
+Assets/Prefabs/apartments/materials/greencd.mat.meta
+Assets/Prefabs/apartments/materials/holeblack.mat
+Assets/Prefabs/apartments/materials/holeblack.mat.meta
+Assets/Prefabs/apartments/materials/kitchenwindow.mat
+Assets/Prefabs/apartments/materials/kitchenwindow.mat.meta
+Assets/Prefabs/apartments/materials/knifeblock.mat
+Assets/Prefabs/apartments/materials/knifeblock.mat.meta
+Assets/Prefabs/apartments/materials/lambert1.mat
+Assets/Prefabs/apartments/materials/lambert1.mat.meta
+Assets/Prefabs/apartments/materials/lambert37.mat
+Assets/Prefabs/apartments/materials/lambert37.mat.meta
+Assets/Prefabs/apartments/materials/lambert5.mat
+Assets/Prefabs/apartments/materials/lambert5.mat.meta
+Assets/Prefabs/apartments/materials/lambert9.mat
+Assets/Prefabs/apartments/materials/lambert9.mat.meta
+Assets/Prefabs/apartments/materials/lapmshade.mat
+Assets/Prefabs/apartments/materials/lapmshade.mat.meta
+Assets/Prefabs/apartments/materials/leatheragain.mat
+Assets/Prefabs/apartments/materials/leatheragain.mat.meta
+Assets/Prefabs/apartments/materials/leatherchairlegs.mat
+Assets/Prefabs/apartments/materials/leatherchairlegs.mat.meta
+Assets/Prefabs/apartments/materials/lense.mat
+Assets/Prefabs/apartments/materials/lense.mat.meta
+Assets/Prefabs/apartments/materials/lighfloor 1.mat
+Assets/Prefabs/apartments/materials/lighfloor 1.mat.meta
+Assets/Prefabs/apartments/materials/lighfloor 2.mat
+Assets/Prefabs/apartments/materials/lighfloor 2.mat.meta
+Assets/Prefabs/apartments/materials/lighfloor 3.mat
+Assets/Prefabs/apartments/materials/lighfloor 3.mat.meta
+Assets/Prefabs/apartments/materials/lighfloor.mat
+Assets/Prefabs/apartments/materials/lighfloor.mat.meta
+Assets/Prefabs/apartments/materials/lightswitch.mat
+Assets/Prefabs/apartments/materials/lightswitch.mat.meta
+Assets/Prefabs/apartments/materials/lightswitch1.mat
+Assets/Prefabs/apartments/materials/lightswitch1.mat.meta
+Assets/Prefabs/apartments/materials/metalpoletable.mat
+Assets/Prefabs/apartments/materials/metalpoletable.mat.meta
+Assets/Prefabs/apartments/materials/microwavegrey.mat
+Assets/Prefabs/apartments/materials/microwavegrey.mat.meta
+Assets/Prefabs/apartments/materials/musicleg.mat
+Assets/Prefabs/apartments/materials/musicleg.mat.meta
+Assets/Prefabs/apartments/materials/newyorkskyline.mat
+Assets/Prefabs/apartments/materials/newyorkskyline.mat.meta
+Assets/Prefabs/apartments/materials/phongE10.mat
+Assets/Prefabs/apartments/materials/phongE10.mat.meta
+Assets/Prefabs/apartments/materials/phongE2.mat
+Assets/Prefabs/apartments/materials/phongE2.mat.meta
+Assets/Prefabs/apartments/materials/phongE8.mat
+Assets/Prefabs/apartments/materials/phongE8.mat.meta
+Assets/Prefabs/apartments/materials/pioneeretexturw.mat
+Assets/Prefabs/apartments/materials/pioneeretexturw.mat.meta
+Assets/Prefabs/apartments/materials/poletablletopbot.mat
+Assets/Prefabs/apartments/materials/poletablletopbot.mat.meta
+Assets/Prefabs/apartments/materials/preamptexture.mat
+Assets/Prefabs/apartments/materials/preamptexture.mat.meta
+Assets/Prefabs/apartments/materials/rm187-mynt-48version2.mat
+Assets/Prefabs/apartments/materials/rm187-mynt-48version2.mat.meta
+Assets/Prefabs/apartments/materials/scopeblackplastic.mat
+Assets/Prefabs/apartments/materials/scopeblackplastic.mat.meta
+Assets/Prefabs/apartments/materials/scopeblackversiontwo.mat
+Assets/Prefabs/apartments/materials/scopeblackversiontwo.mat.meta
+Assets/Prefabs/apartments/materials/scopelegsilver.mat
+Assets/Prefabs/apartments/materials/scopelegsilver.mat.meta
+Assets/Prefabs/apartments/materials/scopesmetalplastic.mat
+Assets/Prefabs/apartments/materials/scopesmetalplastic.mat.meta
+Assets/Prefabs/apartments/materials/shelftransparrent.mat
+Assets/Prefabs/apartments/materials/shelftransparrent.mat.meta
+Assets/Prefabs/apartments/materials/shinykitchen.mat
+Assets/Prefabs/apartments/materials/shinykitchen.mat.meta
+Assets/Prefabs/apartments/materials/sofacushions.mat
+Assets/Prefabs/apartments/materials/sofacushions.mat.meta
+Assets/Prefabs/apartments/materials/sofalegs.mat
+Assets/Prefabs/apartments/materials/sofalegs.mat.meta
+Assets/Prefabs/apartments/materials/speakerlegs.mat
+Assets/Prefabs/apartments/materials/speakerlegs.mat.meta
+Assets/Prefabs/apartments/materials/speakers.mat
+Assets/Prefabs/apartments/materials/speakers.mat.meta
+Assets/Prefabs/apartments/materials/speakerscrews.mat
+Assets/Prefabs/apartments/materials/speakerscrews.mat.meta
+Assets/Prefabs/apartments/materials/speakersdark.mat
+Assets/Prefabs/apartments/materials/speakersdark.mat.meta
+Assets/Prefabs/apartments/materials/speakerwood.mat
+Assets/Prefabs/apartments/materials/speakerwood.mat.meta
+Assets/Prefabs/apartments/materials/stainlesssteel.mat
+Assets/Prefabs/apartments/materials/stainlesssteel.mat.meta
+Assets/Prefabs/apartments/materials/towel.mat
+Assets/Prefabs/apartments/materials/towel.mat.meta
+Assets/Prefabs/apartments/materials/tvcolour.mat
+Assets/Prefabs/apartments/materials/tvcolour.mat.meta
+Assets/Prefabs/apartments/materials/tvscreen.mat
+Assets/Prefabs/apartments/materials/tvscreen.mat.meta
+Assets/Prefabs/apartments/materials/whitecd.mat
+Assets/Prefabs/apartments/materials/whitecd.mat.meta
+Assets/Prefabs/apartments/materials/whitewall.mat
+Assets/Prefabs/apartments/materials/whitewall.mat.meta
+Assets/Prefabs/apartments/materials/window.mat
+Assets/Prefabs/apartments/materials/window.mat.meta
+Assets/Prefabs/apartments/materials/wineglassblue.mat
+Assets/Prefabs/apartments/materials/wineglassblue.mat.meta
+Assets/Prefabs/apartments/materials/winelable.mat
+Assets/Prefabs/apartments/materials/winelable.mat.meta
+Assets/Prefabs/apartments/materials/winelidblue.mat
+Assets/Prefabs/apartments/materials/winelidblue.mat.meta
+Assets/Prefabs/apartments/materials/winelidpink.mat
+Assets/Prefabs/apartments/materials/winelidpink.mat.meta
+Assets/Prefabs/apartments/materials/woman.mat
+Assets/Prefabs/apartments/materials/woman.mat.meta
+Assets/Prefabs/apartments/materials/yellowcd.mat
+Assets/Prefabs/apartments/materials/yellowcd.mat.meta
+Assets/Prefabs/apartments/source.meta
+Assets/Prefabs/apartments/source/americannredotoday1.fbx.meta
+Assets/Prefabs/apartments/textures.meta
+Assets/Prefabs/apartments/textures/15A-125V-American-Power-Outlet-Electric-3-6-a-USB-Outlet-Soc.jpeg.meta
+Assets/Prefabs/apartments/textures/360_F_184648654_RUU1LwSaRpgsBFq8DvW1gNIYeaVflDw3.jpeg.meta
+Assets/Prefabs/apartments/textures/Longo_MenintheCity_003.jpeg.meta
+Assets/Prefabs/apartments/textures/Longo_MenintheCity_007.jpeg.meta
+Assets/Prefabs/apartments/textures/Sherman’s Untitled Film Still #56.jpeg.meta
+Assets/Prefabs/apartments/textures/alarmclock.jpeg.meta
+Assets/Prefabs/apartments/textures/amplifiertextureuvmap.jpeg.meta
+Assets/Prefabs/apartments/textures/books.jpeg.meta
+Assets/Prefabs/apartments/textures/eq7texturereremapredoagain.jpeg.meta
+Assets/Prefabs/apartments/textures/generated.meta
+Assets/Prefabs/apartments/textures/generated/Materials.meta
+Assets/Prefabs/apartments/textures/generated/Materials/gen_floor_laminate.mat
+Assets/Prefabs/apartments/textures/generated/Materials/gen_floor_laminate.mat.meta
+Assets/Prefabs/apartments/textures/generated/Materials/gen_window_city_night.mat
+Assets/Prefabs/apartments/textures/generated/Materials/gen_window_city_night.mat.meta
+Assets/Prefabs/apartments/textures/generated/gen_art_strip_bw.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_bw_longo003.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_bw_longo007.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_bw_sherman56.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_cork.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_floor_laminate.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_lacquer_white.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_leather_black.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_marble_white.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_plaster_white.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_rug_gray.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_steel_brushed.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_wallpaper_beige.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_white.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_window_city_night.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_wine_label.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_wood_brown_hi.png.meta
+Assets/Prefabs/apartments/textures/generated/gen_wood_dark.png.meta
+Assets/Prefabs/apartments/textures/generated/window_city_1997.png.meta
+Assets/Prefabs/apartments/textures/harmankardonuvmapsredo.jpeg.meta
+Assets/Prefabs/apartments/textures/istockphoto-865343068-612x612.jpeg.meta
+Assets/Prefabs/apartments/textures/lighfloor.jpeg.meta
+Assets/Prefabs/apartments/textures/photo-1605702012553-e954fbde66eb.jpeg.meta
+Assets/Prefabs/apartments/textures/pioneercdmayauvmapredo.jpeg.meta
+Assets/Prefabs/apartments/textures/preampamplifiertextureuvmap725.jpeg.meta
+Assets/Prefabs/apartments/textures/rm187-mynt-48version2.jpeg.meta
+Assets/Prefabs/basement.meta
+Assets/Prefabs/basement/Basement.prefab
+Assets/Prefabs/basement/Basement.prefab.meta
+Assets/Prefabs/basement/materials.meta
+Assets/Prefabs/basement/materials/Material.001.mat
+Assets/Prefabs/basement/materials/Material.001.mat.meta
+Assets/Prefabs/basement/materials/Material.mat
+Assets/Prefabs/basement/materials/Material.mat.meta
+Assets/Prefabs/basement/materials/arcade1.mat
+Assets/Prefabs/basement/materials/arcade1.mat.meta
+Assets/Prefabs/basement/materials/arcade2.mat
+Assets/Prefabs/basement/materials/arcade2.mat.meta
+Assets/Prefabs/basement/materials/arm.001.mat
+Assets/Prefabs/basement/materials/arm.001.mat.meta
+Assets/Prefabs/basement/materials/barrel.mat
+Assets/Prefabs/basement/materials/barrel.mat.meta
+Assets/Prefabs/basement/materials/bed.mat
+Assets/Prefabs/basement/materials/bed.mat.meta
+Assets/Prefabs/basement/materials/big_waterpipe.mat
+Assets/Prefabs/basement/materials/big_waterpipe.mat.meta
+Assets/Prefabs/basement/materials/body.001.mat
+Assets/Prefabs/basement/materials/body.001.mat.meta
+Assets/Prefabs/basement/materials/can_graber.mat
+Assets/Prefabs/basement/materials/can_graber.mat.meta
+Assets/Prefabs/basement/materials/cartonbox.mat
+Assets/Prefabs/basement/materials/cartonbox.mat.meta
+Assets/Prefabs/basement/materials/copper_wire.mat
+Assets/Prefabs/basement/materials/copper_wire.mat.meta
+Assets/Prefabs/basement/materials/door corners.mat
+Assets/Prefabs/basement/materials/door corners.mat.meta
+Assets/Prefabs/basement/materials/door.mat
+Assets/Prefabs/basement/materials/door.mat.meta
+Assets/Prefabs/basement/materials/food_can.001.mat
+Assets/Prefabs/basement/materials/food_can.001.mat.meta
+Assets/Prefabs/basement/materials/food_can.002.mat
+Assets/Prefabs/basement/materials/food_can.002.mat.meta
+Assets/Prefabs/basement/materials/food_can.003.mat
+Assets/Prefabs/basement/materials/food_can.003.mat.meta
+Assets/Prefabs/basement/materials/food_can.mat
+Assets/Prefabs/basement/materials/food_can.mat.meta
+Assets/Prefabs/basement/materials/foots.001.mat
+Assets/Prefabs/basement/materials/foots.001.mat.meta
+Assets/Prefabs/basement/materials/gloves.001.mat
+Assets/Prefabs/basement/materials/gloves.001.mat.meta
+Assets/Prefabs/basement/materials/ground.mat
+Assets/Prefabs/basement/materials/ground.mat.meta
+Assets/Prefabs/basement/materials/head.001.mat
+Assets/Prefabs/basement/materials/head.001.mat.meta
+Assets/Prefabs/basement/materials/hood.001.mat
+Assets/Prefabs/basement/materials/hood.001.mat.meta
+Assets/Prefabs/basement/materials/legs.001.mat
+Assets/Prefabs/basement/materials/legs.001.mat.meta
+Assets/Prefabs/basement/materials/light.001.mat
+Assets/Prefabs/basement/materials/light.001.mat.meta
+Assets/Prefabs/basement/materials/light.mat
+Assets/Prefabs/basement/materials/light.mat.meta
+Assets/Prefabs/basement/materials/lil room wall.mat
+Assets/Prefabs/basement/materials/lil room wall.mat.meta
+Assets/Prefabs/basement/materials/machine_back.mat
+Assets/Prefabs/basement/materials/machine_back.mat.meta
+Assets/Prefabs/basement/materials/machine_front.mat
+Assets/Prefabs/basement/materials/machine_front.mat.meta
+Assets/Prefabs/basement/materials/machine_up.mat
+Assets/Prefabs/basement/materials/machine_up.mat.meta
+Assets/Prefabs/basement/materials/metal_stairs handle.mat
+Assets/Prefabs/basement/materials/metal_stairs handle.mat.meta
+Assets/Prefabs/basement/materials/oiltank.mat
+Assets/Prefabs/basement/materials/oiltank.mat.meta
+Assets/Prefabs/basement/materials/paintcan.mat
+Assets/Prefabs/basement/materials/paintcan.mat.meta
+Assets/Prefabs/basement/materials/plastic.001.mat
+Assets/Prefabs/basement/materials/plastic.001.mat.meta
+Assets/Prefabs/basement/materials/plastic.mat
+Assets/Prefabs/basement/materials/plastic.mat.meta
+Assets/Prefabs/basement/materials/rusty can.mat
+Assets/Prefabs/basement/materials/rusty can.mat.meta
+Assets/Prefabs/basement/materials/screen.mat
+Assets/Prefabs/basement/materials/screen.mat.meta
+Assets/Prefabs/basement/materials/shelf_metal.mat
+Assets/Prefabs/basement/materials/shelf_metal.mat.meta
+Assets/Prefabs/basement/materials/skinlessmaterial.mat
+Assets/Prefabs/basement/materials/skinlessmaterial.mat.meta
+Assets/Prefabs/basement/materials/spade.mat
+Assets/Prefabs/basement/materials/spade.mat.meta
+Assets/Prefabs/basement/materials/sprayer.mat
+Assets/Prefabs/basement/materials/sprayer.mat.meta
+Assets/Prefabs/basement/materials/stone_stairs.mat
+Assets/Prefabs/basement/materials/stone_stairs.mat.meta
+Assets/Prefabs/basement/materials/v_pipe.mat
+Assets/Prefabs/basement/materials/v_pipe.mat.meta
+Assets/Prefabs/basement/materials/vaccum.mat
+Assets/Prefabs/basement/materials/vaccum.mat.meta
+Assets/Prefabs/basement/materials/vaccum_sucker.mat
+Assets/Prefabs/basement/materials/vaccum_sucker.mat.meta
+Assets/Prefabs/basement/materials/walls.mat
+Assets/Prefabs/basement/materials/walls.mat.meta
+Assets/Prefabs/basement/materials/water_pipe.mat
+Assets/Prefabs/basement/materials/water_pipe.mat.meta
+Assets/Prefabs/basement/materials/wood_box.mat
+Assets/Prefabs/basement/materials/wood_box.mat.meta
+Assets/Prefabs/basement/materials/wood_planks.mat
+Assets/Prefabs/basement/materials/wood_planks.mat.meta
+Assets/Prefabs/basement/materials/wood_rouf.mat
+Assets/Prefabs/basement/materials/wood_rouf.mat.meta
+Assets/Prefabs/basement/source.meta
+Assets/Prefabs/basement/source/basement.blend.meta
+Assets/Prefabs/basement/source/basement.fbx.meta
+Assets/Prefabs/basement/textures.meta
+Assets/Prefabs/basement/textures/4826.jpeg.meta
+Assets/Prefabs/basement/textures/Annotation2023-05-20093410.png.meta
+Assets/Prefabs/basement/textures/Annotation2023-05-20093439.png.meta
+Assets/Prefabs/basement/textures/Concretebaredirtytextureseamless01538.jpeg.meta
+Assets/Prefabs/basement/textures/Dirtycanvas.png.meta
+Assets/Prefabs/basement/textures/IMG_20230404_115149.png.meta
+Assets/Prefabs/basement/textures/Rustymetallic_stairs_256.png.meta
+Assets/Prefabs/basement/textures/SkinlessHuman_LowRes.png.meta
+Assets/Prefabs/basement/textures/Unpacked.meta
+Assets/Prefabs/basement/textures/Unpacked/4826.png.meta
+Assets/Prefabs/basement/textures/Unpacked/Annotation 2023-05-20 093410.png.meta
+Assets/Prefabs/basement/textures/Unpacked/Annotation 2023-05-20 093439.png.meta
+Assets/Prefabs/basement/textures/Unpacked/B195-05-Coffee-Stain-Remover-1.png.meta
+Assets/Prefabs/basement/textures/Unpacked/Concrete bare dirty texture seamless 01538.png.meta
+Assets/Prefabs/basement/textures/Unpacked/Dirty canvas.png.meta
+Assets/Prefabs/basement/textures/Unpacked/Rusty metallic_stairs_256.png.meta
+Assets/Prefabs/basement/textures/Unpacked/con1.png.meta
+Assets/Prefabs/basement/textures/Unpacked/daniele-levis-pelusi-rWtBTCAGqXs-unsplash.png.meta
+Assets/Prefabs/basement/textures/Unpacked/dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.png.meta
+Assets/Prefabs/basement/textures/Unpacked/glove_256px (1).png.meta
+Assets/Prefabs/basement/textures/Unpacked/hkhj.png.meta
+Assets/Prefabs/basement/textures/Unpacked/hoodie.256px.png.meta
+Assets/Prefabs/basement/textures/Unpacked/images.png.meta
+Assets/Prefabs/basement/textures/Unpacked/jihun-park-mattress2.png.meta
+Assets/Prefabs/basement/textures/Unpacked/paintcan.png.meta
+Assets/Prefabs/basement/textures/Unpacked/pj0dx4ni.png.meta
+Assets/Prefabs/basement/textures/Unpacked/rouf wooden_256.png.meta
+Assets/Prefabs/basement/textures/Unpacked/seven-roadtrips-RIG1irm8si4-unsplash.png.meta
+Assets/Prefabs/basement/textures/Unpacked/spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.png.meta
+Assets/Prefabs/basement/textures/Unpacked/vaccum pipe256.png.meta
+Assets/Prefabs/basement/textures/Unpacked/wet-vacuum-cleaner-1000x1000.png.meta
+Assets/Prefabs/basement/textures/arcade256.png.meta
+Assets/Prefabs/basement/textures/arcade2_256.png.meta
+Assets/Prefabs/basement/textures/barrel_dithered_256.png.meta
+Assets/Prefabs/basement/textures/box_fithered_256px.png.meta
+Assets/Prefabs/basement/textures/can1.png.meta
+Assets/Prefabs/basement/textures/can2.png.meta
+Assets/Prefabs/basement/textures/can3.png.meta
+Assets/Prefabs/basement/textures/can4.png.meta
+Assets/Prefabs/basement/textures/cartonbox_dithered_256px.png.meta
+Assets/Prefabs/basement/textures/cleaner_bottlz.png.meta
+Assets/Prefabs/basement/textures/con1.jpeg.meta
+Assets/Prefabs/basement/textures/daniele-levis-pelusi-rWtBTCAGqXs-unsplash.jpeg.meta
+Assets/Prefabs/basement/textures/dh35fs-1b9dad04-91f2-4439-8968-928de37d148e.jpeg.meta
+Assets/Prefabs/basement/textures/door_256.png.meta
+Assets/Prefabs/basement/textures/frontglove_256.png.meta
+Assets/Prefabs/basement/textures/gas_tank256.png.meta
+Assets/Prefabs/basement/textures/generated.meta
+Assets/Prefabs/basement/textures/generated/gen_bas_door.png.meta
+Assets/Prefabs/basement/textures/generated/gen_bas_floor_concrete.png.meta
+Assets/Prefabs/basement/textures/generated/gen_bas_rail_rust.png.meta
+Assets/Prefabs/basement/textures/generated/gen_bas_stairs.png.meta
+Assets/Prefabs/basement/textures/generated/gen_bas_wall_concrete.png.meta
+Assets/Prefabs/basement/textures/generated/gen_bas_wall_plaster.png.meta
+Assets/Prefabs/basement/textures/glove_256px1.png.meta
+Assets/Prefabs/basement/textures/hkhj.jpeg.meta
+Assets/Prefabs/basement/textures/hoodie_256px.png.meta
+Assets/Prefabs/basement/textures/hoodie_back_256.png.meta
+Assets/Prefabs/basement/textures/images.jpeg.meta
+Assets/Prefabs/basement/textures/jihun-park-mattress2.jpeg.meta
+Assets/Prefabs/basement/textures/paintcan.jpeg.meta
+Assets/Prefabs/basement/textures/pants_256x256px.png.meta
+Assets/Prefabs/basement/textures/pj0dx4ni.jpeg.meta
+Assets/Prefabs/basement/textures/roufwooden_256.png.meta
+Assets/Prefabs/basement/textures/seven-roadtrips-RIG1irm8si4-unsplash.jpeg.meta
+Assets/Prefabs/basement/textures/spade_2586.png.meta
+Assets/Prefabs/basement/textures/spray-paint-can-4k-and-2k-textures-3d-model-39e7bb0537.jpeg.meta
+Assets/Prefabs/basement/textures/stone_stairs-256.png.meta
+Assets/Prefabs/basement/textures/vaccumpipe256.jpeg.meta
+Assets/Prefabs/basement/textures/washin_machine.png.meta
+Assets/Prefabs/basement/textures/waterpipe.png.meta
+Assets/Prefabs/basement/textures/wet-vacuum-cleaner-1000x1000-2.png.meta
+Assets/Prefabs/basement/textures/wet-vacuum-cleaner-1000x1000-3.png.meta
+Assets/Prefabs/policestation.glb.meta
+Assets/Prefabs/source.meta
+Assets/Prefabs/source/imagecheck.fbx.meta
+Assets/Prefabs/textures.meta
+Assets/Prefabs/textures/Chair & Table_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/Counter_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/Door1_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/FRAMES_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/Pc & Boxes_Keybinds_BaseColor.png.meta
+Assets/Prefabs/textures/Pc & Boxes_Keyboards_BaseColor.png.meta
+Assets/Prefabs/textures/Pc & Boxes_Pc_BaseColor.png.meta
+Assets/Prefabs/textures/Pc & Boxes_Pc_Screen_BaseColor.png.meta
+Assets/Prefabs/textures/Wall Props & Cabinet_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/Wall, Window & Ground_standardSurface1_BaseColor.png.meta
+Assets/Prefabs/textures/boxes & stand_standardSurface1_BaseColor.png.meta
+Assets/Prefabs/textures/chair and desk_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/door and frame_standardSurface2_BaseColor.png.meta
+Assets/Prefabs/textures/flag_openPBR_shader1_BaseColor.png.meta
+Assets/Prefabs/textures/ground model_standardSurface4_BaseColor.png.meta
+Assets/Prefabs/textures/pc_Pc_Screen_BaseColor.png.meta
+Assets/Readme.asset
+Assets/Readme.asset.meta
+Assets/Resources.meta
+Assets/Resources/NotebookArt.meta
+Assets/Resources/NotebookArt/basement_key_17.png.meta
+Assets/Resources/NotebookArt/case_file.png.meta
+Assets/Resources/NotebookArt/child_drawing.png.meta
+Assets/Resources/NotebookArt/dmitry_diary.png.meta
+Assets/Resources/NotebookArt/electricity_receipt.png.meta
+Assets/Resources/NotebookArt/family_photo.png.meta
+Assets/Resources/NotebookArt/father_note.png.meta
+Assets/Resources/NotebookArt/ivan_letter.png.meta
+Assets/Resources/NotebookCanvas.prefab
+Assets/Resources/NotebookCanvas.prefab.meta
+Assets/Scenes.meta
+Assets/Scenes/Day1.unity.meta
+Assets/Scenes/Day2.unity.meta
+Assets/Scenes/Day3.unity.meta
+Assets/Scenes/SampleScene.unity
+Assets/Scenes/SampleScene.unity.meta
+Assets/Scenes/Scene1.meta
+Assets/Scenes/Scene1/LightingData.asset.meta
+Assets/Scenes/Scene1/Lightmap-0_comp_dir.png.meta
+Assets/Scenes/Scene1/Lightmap-0_comp_light.exr.meta
+Assets/Scenes/Scene1/Lightmap-1_comp_dir.png.meta
+Assets/Scenes/Scene1/Lightmap-1_comp_light.exr.meta
+Assets/Scenes/Scene1/Lightmap-2_comp_dir.png.meta
+Assets/Scenes/Scene1/Lightmap-2_comp_light.exr.meta
+Assets/Scenes/Scene1/ReflectionProbe-0.exr.meta
+Assets/Scenes/Scene2.unity.meta
+Assets/Scripts.meta
+Assets/Scripts/Evidence.meta
+Assets/Scripts/Evidence/EvidenceItem.cs
+Assets/Scripts/Evidence/EvidenceItem.cs.meta
+Assets/Scripts/Evidence/EvidenceJournal.cs
+Assets/Scripts/Evidence/EvidenceJournal.cs.meta
+Assets/Scripts/Interaction.meta
+Assets/Scripts/Interaction/IInteractable.cs
+Assets/Scripts/Interaction/IInteractable.cs.meta
+Assets/Scripts/Interaction/PlayerInteraction.cs
+Assets/Scripts/Interaction/PlayerInteraction.cs.meta
+Assets/Scripts/Interaction/StationExit.cs
+Assets/Scripts/Interaction/StationExit.cs.meta
+Assets/Scripts/Player.meta
+Assets/Scripts/Player/PlayerController.cs
+Assets/Scripts/Player/PlayerController.cs.meta
+Assets/Scripts/Player/PlayerNotebook.cs
+Assets/Scripts/Player/PlayerNotebook.cs.meta
+Assets/Scripts/Story.meta
+Assets/Scripts/Story/ApartmentDayAtmosphere.cs
+Assets/Scripts/Story/ApartmentDayAtmosphere.cs.meta
+Assets/Scripts/UI.meta
+Assets/Scripts/UI/InspectionUI.cs
+Assets/Scripts/UI/InspectionUI.cs.meta
+Assets/Scripts/UI/NotebookView.cs
+Assets/Scripts/UI/NotebookView.cs.meta
+Assets/Settings.meta
+Assets/Settings/DefaultVolumeProfile.asset
+Assets/Settings/DefaultVolumeProfile.asset.meta
+Assets/Settings/Mobile_RPAsset.asset
+Assets/Settings/Mobile_RPAsset.asset.meta
+Assets/Settings/Mobile_Renderer.asset
+Assets/Settings/Mobile_Renderer.asset.meta
+Assets/Settings/PC_RPAsset.asset
+Assets/Settings/PC_RPAsset.asset.meta
+Assets/Settings/PC_Renderer.asset
+Assets/Settings/PC_Renderer.asset.meta
+Assets/Settings/SampleSceneProfile.asset
+Assets/Settings/SampleSceneProfile.asset.meta
+Assets/Settings/UniversalRenderPipelineGlobalSettings.asset.meta
+Assets/TextMesh Pro.meta
+Assets/TextMesh Pro/Fonts.meta
+Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta
+Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta
+Assets/TextMesh Pro/Resources.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
+Assets/TextMesh Pro/Resources/Style Sheets.meta
+Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta
+Assets/TextMesh Pro/Resources/TMP Settings.asset
+Assets/TextMesh Pro/Resources/TMP Settings.asset.meta
+Assets/TextMesh Pro/Shaders.meta
+Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl
+Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl.meta
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF SSD SpaceWarp.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF SSD SpaceWarp.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF SpaceWarp.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF SpaceWarp.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph
+Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph
+Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD SpaceWarp.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD SpaceWarp.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SpaceWarp.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SpaceWarp.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph
+Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph
+Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta
+Assets/TextMesh Pro/Shaders/TMPro.cginc
+Assets/TextMesh Pro/Shaders/TMPro.cginc.meta
+Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta
+Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta
+Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta
+Assets/TutorialInfo.meta
+Assets/TutorialInfo/Editor.meta
+Assets/TutorialInfo/Editor/ReadmeEditor.cs
+Assets/TutorialInfo/Editor/ReadmeEditor.cs.meta
+Assets/TutorialInfo/Icons.meta
+Assets/TutorialInfo/Icons/URP.png.meta
+Assets/TutorialInfo/Readme.cs
+Assets/TutorialInfo/Readme.cs.meta
+Assets/TutorialInfo/StyleSheets.meta
+Assets/TutorialInfo/StyleSheets/ReadmeEditor.uss
+Assets/TutorialInfo/StyleSheets/ReadmeEditor.uss.meta
+Assets/TutorialInfo/StyleSheets/ReadmeEditorDark.uss
+Assets/TutorialInfo/StyleSheets/ReadmeEditorDark.uss.meta
+Assets/TutorialInfo/StyleSheets/ReadmeEditorLight.uss
+Assets/TutorialInfo/StyleSheets/ReadmeEditorLight.uss.meta
+Documentation/EvidenceRealism.md
+Documentation/Interactions.md
+Documentation/Notebook.md
+Documentation/interaction-generation.txt
+Documentation/interaction-verification.txt
+Documentation/interaction-visual-verification.txt
+Packages/manifest.json
+Packages/packages-lock.json
+ProjectSettings/AudioManager.asset
+ProjectSettings/ClusterInputManager.asset
+ProjectSettings/DynamicsManager.asset
+ProjectSettings/EditorSettings.asset
+ProjectSettings/GraphicsSettings.asset
+ProjectSettings/InputManager.asset
+ProjectSettings/MemorySettings.asset
+ProjectSettings/MultiplayerManager.asset
+ProjectSettings/NavMeshAreas.asset
+ProjectSettings/PackageManagerSettings.asset
+ProjectSettings/Packages/com.unity.ai.assistant/Settings.json
+ProjectSettings/Physics2DSettings.asset
+ProjectSettings/PhysicsCoreProjectSettings2D.asset
+ProjectSettings/PresetManager.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/SceneTemplateSettings.json
+ProjectSettings/Switch2PlayerSettings.asset
+ProjectSettings/TagManager.asset
+ProjectSettings/TimeManager.asset
+ProjectSettings/UnityConnectSettings.asset
+ProjectSettings/VFXManager.asset
+ProjectSettings/VersionControlSettings.asset
+ProjectSettings/XRSettings.asset
+UpgradeLog.htm
+output/apartment-days/README.md
+output/apartment-days/generation.txt
+output/apartment-days/playmode.txt
+output/basement/export-report.json
+output/basement/export_basement.py
+output/basement/import_basement_body.cs.txt
+output/basement/material_specs.cs.txt
+output/human-scale/README.md
+output/human-scale/apply.cs.txt
+output/human-scale/inspect.cs.txt
+output/human-scale/measurements-after.txt
+output/human-scale/measurements-before.txt
+output/human-scale/playmode-verification.txt
+output/human-scale/setup.txt
+output/imagegen/window_city_1997.prompt.txt
+output/police-station/README.md
+output/police-station/ceiling-verification.txt
+output/police-station/inspection.txt
+output/room-rigidbody/objects.txt
+output/station-exit/README.md
+output/station-exit/verification.txt
+poslednee_delo_sjuzhetnaya_koncepciya.md

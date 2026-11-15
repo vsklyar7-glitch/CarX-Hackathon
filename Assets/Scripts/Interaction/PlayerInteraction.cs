@@ -49,6 +49,14 @@ public class PlayerInteraction : MonoBehaviour
         }
         if (closedFrame == Time.frameCount) return;
         target = null;
+        InvestigationDayFlow dayFlow = InvestigationDayFlow.Current;
+        if (dayFlow != null && dayFlow.CanReturnToStation
+            && !controller.ControlsBlocked && Cursor.lockState == CursorLockMode.Locked)
+        {
+            inspectionUI.SetPrompt(InvestigationDayFlow.ReturnPrompt);
+            if (keyboard != null && keyboard.eKey.wasPressedThisFrame) dayFlow.ReturnToStation(this);
+            return;
+        }
         if (!controller.ControlsBlocked && Cursor.lockState == CursorLockMode.Locked)
             target = FindTarget();
         inspectionUI.SetPrompt(target != null ? target.Prompt : "");
