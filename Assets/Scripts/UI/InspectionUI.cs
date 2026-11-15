@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -29,14 +28,26 @@ public class InspectionUI : MonoBehaviour
         SetPrompt("");
         title.text = item.title;
         description.text = item.description;
+        Sprite illustration = item.image != null ? item.image : Resources.Load<Sprite>("NotebookArt/" + item.evidenceId);
         RectTransform descriptionRect = description.rectTransform;
-        descriptionRect.anchorMax = new Vector2(item.image != null ? 0.46f : 0.66f, descriptionRect.anchorMax.y);
-        status.text = added ? "Улика добавлена в блокнот" : "Улика уже есть в блокноте";
-        image.sprite = item.image;
-        image.gameObject.SetActive(item.image != null);
-        StringBuilder entries = new StringBuilder("БЛОКНОТ\n\n");
-        foreach (string entry in evidenceJournal.Titles) entries.Append("• ").AppendLine(entry);
-        journal.text = entries.ToString();
+        descriptionRect.anchorMin = new Vector2(illustration != null ? 0.42f : 0.02f, 0.29f);
+        descriptionRect.anchorMax = new Vector2(0.96f, 0.80f);
+        title.rectTransform.anchorMax = new Vector2(0.96f, title.rectTransform.anchorMax.y);
+        description.enableAutoSizing = true;
+        description.fontSizeMin = 18;
+        description.fontSizeMax = 25;
+        status.text = (added ? "Улика добавлена в блокнот" : "Улика уже есть в блокноте") + "   ·   J — открыть блокнот";
+        status.rectTransform.anchorMax = new Vector2(0.96f, status.rectTransform.anchorMax.y);
+        image.sprite = illustration;
+        image.preserveAspect = true;
+        image.raycastTarget = false;
+        image.rectTransform.anchorMin = new Vector2(0.03f, 0.30f);
+        image.rectTransform.anchorMax = new Vector2(0.38f, 0.78f);
+        image.rectTransform.offsetMin = Vector2.zero;
+        image.rectTransform.offsetMax = Vector2.zero;
+        image.gameObject.SetActive(illustration != null);
+        // Ссылка сохранена для совместимости с уже размещёнными префабами.
+        if (journal != null) journal.gameObject.SetActive(false);
         panel.SetActive(true);
     }
 

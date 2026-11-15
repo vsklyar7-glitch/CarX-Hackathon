@@ -13,6 +13,8 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerController controller;
     private IInteractable target;
     private bool modalOpen;
+    public bool IsInspecting => modalOpen;
+    private PlayerNotebook notebook;
     private bool previousBlocked;
     private CursorLockMode previousCursor;
     private bool previousCursorVisible;
@@ -20,6 +22,9 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Awake()
     {
+        // Подключение работает и в старых сценах, где игрок уже размещён.
+        if (GetComponent<PlayerNotebook>() == null) gameObject.AddComponent<PlayerNotebook>();
+        notebook = GetComponent<PlayerNotebook>();
         controller = GetComponent<PlayerController>();
         if (playerCamera == null) playerCamera = GetComponentInChildren<Camera>();
         if (inspectionUI == null) inspectionUI = GetComponentInChildren<InspectionUI>(true);
@@ -34,6 +39,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Update()
     {
+        if (notebook != null && notebook.ConsumesModalInput) return;
         Keyboard keyboard = Keyboard.current;
         if (modalOpen)
         {
@@ -82,13 +88,14 @@ public class PlayerInteraction : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         EvidenceJournal journal = EvidenceJournal.GetOrCreate();
-        bool added = journal.Add(item.evidenceId, item.title);
+        bool added = journal.Add(item);
         inspectionUI.Show(item, journal, added, CloseInspection);
     }
 
     public void CloseInspection()
     {
         if (!modalOpen) return;
+        if (notebook != null && notebook.IsOpen) notebook.Close();
         modalOpen = false;
         closedFrame = Time.frameCount;
         if (inspectionUI != null) inspectionUI.Hide();
