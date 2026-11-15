@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private float cameraRotationX;
     private int blockedThroughFrame = -1;
     public bool ControlsBlocked { get; private set; }
+    // Используется вступлением в участке; обзор и осмотр улик остаются доступны.
+    public bool MovementBlocked { get; set; }
 
     private void Awake()
     {
@@ -28,6 +30,8 @@ public class PlayerController : MonoBehaviour
             Camera childCamera = GetComponentInChildren<Camera>();
             if (childCamera != null) playerCamera = childCamera.transform;
         }
+        if (playerCamera != null)
+            cameraRotationX = Mathf.DeltaAngle(0f, playerCamera.localEulerAngles.x);
     }
 
     private void Start()
@@ -59,12 +63,13 @@ public class PlayerController : MonoBehaviour
             verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
         verticalVelocity += gravity * Time.deltaTime;
         movement.y = verticalVelocity;
-        if (controller.enabled)
+        if (controller.enabled && !MovementBlocked)
         {
             CollisionFlags collisions = controller.Move(movement * Time.deltaTime);
             if ((collisions & CollisionFlags.Above) != 0 && verticalVelocity > 0f)
                 verticalVelocity = 0f;
         }
+        if (MovementBlocked) verticalVelocity = 0f;
 
         if (!captured || mouse == null || playerCamera == null) return;
         // Mouse.delta уже содержит смещение за кадр, умножать на deltaTime не нужно.
