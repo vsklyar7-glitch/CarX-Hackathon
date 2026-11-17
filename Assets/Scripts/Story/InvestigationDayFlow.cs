@@ -24,6 +24,7 @@ public class InvestigationDayFlow : MonoBehaviour
         journal = EvidenceJournal.GetOrCreate();
         if (day > 0) journal.SetApartmentDay(day);
         journal.EvidenceAdded += OnEvidenceAdded;
+        journal.PhotoRestored += RefreshCompletion;
         RefreshCompletion();
     }
 
@@ -32,6 +33,7 @@ public class InvestigationDayFlow : MonoBehaviour
     private void RefreshCompletion()
     {
         CanReturnToStation = day > 0 && day < 3 && requiredEvidenceIds != null
+            && (day != 2 || journal.FamilyPhotoRestored)
             && requiredEvidenceIds.Length > 0
             && Array.TrueForAll(requiredEvidenceIds, id => !string.IsNullOrEmpty(id) && journal.Contains(id));
     }
@@ -75,6 +77,7 @@ public class InvestigationDayFlow : MonoBehaviour
     private void OnDisable()
     {
         if (journal != null) journal.EvidenceAdded -= OnEvidenceAdded;
+        if (journal != null) journal.PhotoRestored -= RefreshCompletion;
         if (Current == this) Current = null;
     }
 }

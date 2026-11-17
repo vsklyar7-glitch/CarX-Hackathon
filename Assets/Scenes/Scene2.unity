@@ -47198,26 +47198,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!1 &1120888583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5292483441398665851, guid: f8a0b92359de54646899f54f679d234b, type: 3}
-  m_PrefabInstance: {fileID: 1809225595}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1120888588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120888583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeca941d04e222f4cbdb22260e67ebbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StationSeatedIntro
-  standingPosition: {x: 3.45, y: -0.02, z: -8.65}
-  standingCameraHeight: 1.45
-  standDuration: 1.2
 --- !u!64 &1122539346
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71048,61 +71028,28 @@ PrefabInstance:
       value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
-<<<<<<< HEAD
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5126868314297030509, guid: f8a0b92359de54646899f54f679d234b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.225
-=======
-      propertyPath: m_LocalPosition.x
-      value: 0
->>>>>>> origin/main
-      objectReference: {fileID: 0}
-    - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.138
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalPosition.z
-<<<<<<< HEAD
-      value: -8.65
-=======
-      value: -0.06
->>>>>>> origin/main
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalRotation.w
-<<<<<<< HEAD
-      value: 0.9781476
-=======
-      value: 0.9903374
->>>>>>> origin/main
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalRotation.x
-<<<<<<< HEAD
       value: 0
-=======
-      value: 0.13867909
->>>>>>> origin/main
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.2079117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000018626451
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2960804685064770297, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -71194,14 +71141,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5292483441398665851, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       insertIndex: -1
-<<<<<<< HEAD
       addedObject: {fileID: 459534631}
-=======
-      addedObject: {fileID: 1120888588}
     - targetCorrespondingSourceObject: {fileID: 8685488851804626905, guid: f8a0b92359de54646899f54f679d234b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 214252511}
->>>>>>> origin/main
   m_SourcePrefab: {fileID: 100100000, guid: f8a0b92359de54646899f54f679d234b, type: 3}
 --- !u!64 &1811245861
 MeshCollider:

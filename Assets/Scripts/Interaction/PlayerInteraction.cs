@@ -15,6 +15,8 @@ public class PlayerInteraction : MonoBehaviour
     private IInteractable target;
     private bool modalOpen;
     public bool IsInspecting => modalOpen;
+    public bool IsSolvingPhoto => photoPuzzle != null && photoPuzzle.IsOpen;
+    private PhotoPuzzleView photoPuzzle;
     private PlayerNotebook notebook;
     private bool previousBlocked;
     private CursorLockMode previousCursor;
@@ -99,6 +101,22 @@ public class PlayerInteraction : MonoBehaviour
         controller.SetControlsBlocked(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        if (item.NeedsAssembly)
+        {
+            if (photoPuzzle == null) photoPuzzle = inspectionUI.gameObject.AddComponent<PhotoPuzzleView>();
+            inspectionUI.SetPrompt("");
+            photoPuzzle.Show(item, inspectionUI, () =>
+            {
+                EvidenceJournal.GetOrCreate().RestoreFamilyPhoto();
+                ShowEvidence(item);
+            }, CloseInspection);
+            return;
+        }
+        ShowEvidence(item);
+    }
+
+    private void ShowEvidence(EvidenceItem item)
+    {
         EvidenceJournal journal = EvidenceJournal.GetOrCreate();
         bool added = journal.Add(item);
         inspectionUI.Show(item, journal, added, CloseInspection);
@@ -111,6 +129,7 @@ public class PlayerInteraction : MonoBehaviour
         modalOpen = false;
         closedFrame = Time.frameCount;
         if (inspectionUI != null) inspectionUI.Hide();
+        if (photoPuzzle != null) photoPuzzle.Hide();
         controller.SetControlsBlocked(previousBlocked);
         Cursor.lockState = previousCursor;
         Cursor.visible = previousCursorVisible;

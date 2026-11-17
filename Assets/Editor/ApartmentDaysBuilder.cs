@@ -55,9 +55,8 @@ public static class ApartmentDaysBuilder
                         chair.transform.Rotate(0,0,72,Space.World);
                         chair.transform.position+=Vector3.up*(floor.max.y+.025f-chair.bounds.min.y);
                         for(int i=0;i<5;i++) Box(story.transform,"Scattered paper "+i,new Vector3(table.center.x-.6f+i*.24f,floor.max.y+.008f,table.center.z+.8f+i*.13f),new Vector3(.18f,.004f,.24f),paper,Quaternion.Euler(0,i*37,0));
-                        photo.GetComponent<EvidenceItem>().description="На прежней семейной фотографии лицо Алексея зачёркнуто. Дмитрий, Иван и отец остались нетронутыми. Кто-то хочет, чтобы я вспомнил ту дверь.";
-                        Box(photo.transform,"Crossed-out Alexei A",new Vector3(.09f,.047f,.05f),new Vector3(.065f,.004f,.009f),red,Quaternion.Euler(0,42,0),true);
-                        Box(photo.transform,"Crossed-out Alexei B",new Vector3(.09f,.049f,.05f),new Vector3(.065f,.004f,.009f),red,Quaternion.Euler(0,-42,0),true);
+                        photo.GetComponent<EvidenceItem>().description=PhotoPuzzleSetup.RestoredDescription;
+                        photo.GetComponent<EvidenceItem>().requiresPhotoAssembly=day==2;
                     }
                     if(day==3)
                     {

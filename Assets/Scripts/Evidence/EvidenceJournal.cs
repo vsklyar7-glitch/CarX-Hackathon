@@ -7,6 +7,15 @@ public class EvidenceJournal : MonoBehaviour
 {
     public static EvidenceJournal Instance { get; private set; }
     public event Action<string> EvidenceAdded;
+    public event Action PhotoRestored;
+    public bool FamilyPhotoRestored { get; private set; }
+
+    public void RestoreFamilyPhoto()
+    {
+        if (FamilyPhotoRestored) return;
+        FamilyPhotoRestored = true;
+        PhotoRestored?.Invoke();
+    }
     private readonly Dictionary<string, string> entries = new Dictionary<string, string>();
     // Снимки данных остаются доступны после выгрузки сцены с предметом.
     private readonly List<Entry> pages = new List<Entry>();
