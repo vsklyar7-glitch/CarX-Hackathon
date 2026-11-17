@@ -1,0 +1,1 @@
+PASS Day3: door interaction handler, fade-out, transitionAudioDay3, scene load, locked destination fade-in, control/cursor restore, notebook, no duplicate transition, progress retained; seconds=14,1485355000004

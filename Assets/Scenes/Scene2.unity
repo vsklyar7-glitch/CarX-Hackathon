@@ -80474,6 +80474,12 @@ MonoBehaviour:
   - Assets/Scenes/Day2.unity
   - Assets/Scenes/Day3.unity
   requiredEvidenceIds: []
+  transitionSoundDay1: {fileID: 8300000, guid: aa69ea84df1e6b84d984e7d34ed0fd76, type: 3}
+  transitionSoundDay2: {fileID: 8300000, guid: 42487868393670b4f81270579f568c26, type: 3}
+  transitionSoundDay3: {fileID: 8300000, guid: 9ce84de0076453d44a68fb03429e3ca6, type: 3}
+  fadeOutDuration: 1.5
+  fadeInDuration: 1.5
+  transitionVolume: 1
 --- !u!4 &2054310647
 Transform:
   m_ObjectHideFlags: 0

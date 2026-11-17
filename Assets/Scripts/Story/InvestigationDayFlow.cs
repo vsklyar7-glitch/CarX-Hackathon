@@ -13,6 +13,13 @@ public class InvestigationDayFlow : MonoBehaviour
         "Assets/Scenes/Day1.unity", "Assets/Scenes/Day2.unity", "Assets/Scenes/Day3.unity"
     };
     public string[] requiredEvidenceIds;
+    [Header("Переход из участка в квартиру")]
+    public AudioClip transitionSoundDay1;
+    public AudioClip transitionSoundDay2;
+    public AudioClip transitionSoundDay3;
+    [Min(0f)] public float fadeOutDuration = 1.5f;
+    [Min(0f)] public float fadeInDuration = 1.5f;
+    [Range(0f, 1f)] public float transitionVolume = 1f;
     public const string ReturnPrompt = "E - вернуться в участок и завершить смену";
     public bool CanReturnToStation { get; private set; }
     private EvidenceJournal journal;
@@ -57,6 +64,14 @@ public class InvestigationDayFlow : MonoBehaviour
         if (SceneUtility.GetBuildIndexByScenePath(path) < 0)
         {
             Debug.LogError("Сцена не включена в Build Settings: " + path, this);
+            return;
+        }
+        if (!endShift)
+        {
+            AudioClip clip = journal.ApartmentDay == 1 ? transitionSoundDay1
+                : journal.ApartmentDay == 2 ? transitionSoundDay2 : transitionSoundDay3;
+            // Переход живёт отдельно от участка и переживает его выгрузку.
+            ApartmentTransition.Begin(path, player, clip, fadeOutDuration, fadeInDuration, transitionVolume);
             return;
         }
         loading = true;

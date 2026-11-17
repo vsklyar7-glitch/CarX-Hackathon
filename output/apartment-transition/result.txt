@@ -1,0 +1,1 @@
+PASS: all three apartment transitions.
