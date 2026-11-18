@@ -1,0 +1,5 @@
+Modified room lights: 19
+Rooms: Main office, Meeting room, Reception
+Intensity: 0.65; cool tint.
+Side office local lights unchanged.
+Environment: cool Trilight ambient, directional intensity 0.18, reflection intensity 0.35.
