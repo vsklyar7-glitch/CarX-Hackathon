@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private float cameraRotationX;
     private int blockedThroughFrame = -1;
-    public bool ControlsBlocked { get; private set; }
+    public bool ControlsBlocked => ControlsBlockedByGameplay || ApartmentTransition.Current != null;
+    internal bool ControlsBlockedByGameplay { get; private set; }
     // Используется вступлением в участке; обзор и осмотр улик остаются доступны.
     public bool MovementBlocked { get; set; }
 
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetControlsBlocked(bool blocked)
     {
-        ControlsBlocked = blocked;
+        ControlsBlockedByGameplay = blocked;
         if (!blocked) blockedThroughFrame = Time.frameCount;
     }
 

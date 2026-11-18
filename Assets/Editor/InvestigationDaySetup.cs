@@ -90,32 +90,16 @@ public static class InvestigationDaySetup
     {
         var flat = scene.GetRootGameObjects().Single(g => g.name.StartsWith("americannredotoday"));
         var meshes = flat.GetComponentsInChildren<Renderer>(true);
-        var table = meshes.Single(r => r.name == "table").bounds;
-        var counter = meshes.Single(r => r.name == "pCube273").bounds;
-        var side = meshes.Single(r => r.name == "toptablesurface").bounds;
         float floor = meshes.Single(r => r.name == "pPlane9").bounds.max.y;
-        var items = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<EvidenceItem>(true)).ToDictionary(e => e.evidenceId);
-        Place(items["family_photo"], new Vector3(table.center.x - .30f, table.max.y + .008f, table.center.z), 0);
-        Place(items["electricity_receipt"], new Vector3(table.center.x + .30f, table.max.y + .008f, table.center.z), -12);
-        Place(items["basement_key_17"], new Vector3(counter.center.x, counter.max.y + .008f, counter.center.z - .5f), 15);
+        // Позиции улик задаются в сценах и сохраняются при повторной настройке дней.
         if (day == 1)
         {
-            var key = items["basement_key_17"];
+            var key = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<EvidenceItem>(true))
+                .Single(item => item.evidenceId == "basement_key_17");
             key.transform.localScale = Vector3.one * 2.5f;
             var keyCollider = key.GetComponent<BoxCollider>();
             keyCollider.size = new Vector3(.084f, .024f, .152f);
             keyCollider.center = new Vector3(0, .008f, 0);
-        }
-        if (day >= 2)
-        {
-            Place(items["dmitry_diary"], new Vector3(side.center.x, side.max.y + .008f, side.center.z), 8);
-            Place(items["ivan_letter"], new Vector3(counter.center.x, counter.max.y + .008f, counter.center.z + .45f), -8);
-        }
-        if (day == 3)
-        {
-            var door = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).Single(t => t.name == "Basement door 17");
-            Place(items["child_drawing"], new Vector3(door.position.x - .18f, floor + .012f, door.position.z + .8f), -15);
-            Place(items["father_note"], new Vector3(table.center.x, table.max.y + .010f, table.center.z + .4f), 12);
         }
         // All days begin just inside the apartment's existing front door.
         var frontDoor = meshes.Single(r => r.name == "pCube219").bounds;

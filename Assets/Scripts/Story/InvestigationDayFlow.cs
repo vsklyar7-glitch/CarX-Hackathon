@@ -13,7 +13,7 @@ public class InvestigationDayFlow : MonoBehaviour
         "Assets/Scenes/Day1.unity", "Assets/Scenes/Day2.unity", "Assets/Scenes/Day3.unity"
     };
     public string[] requiredEvidenceIds;
-    [Header("Переход из участка в квартиру")]
+    [Header("Переход между участком и квартирой")]
     public AudioClip transitionSoundDay1;
     public AudioClip transitionSoundDay2;
     public AudioClip transitionSoundDay3;
@@ -23,7 +23,6 @@ public class InvestigationDayFlow : MonoBehaviour
     public const string ReturnPrompt = "E - вернуться в участок и завершить смену";
     public bool CanReturnToStation { get; private set; }
     private EvidenceJournal journal;
-    private bool loading;
 
     private void OnEnable()
     {
@@ -58,7 +57,7 @@ public class InvestigationDayFlow : MonoBehaviour
 
     private void Load(string path, PlayerInteraction player, bool endShift)
     {
-        if (loading || player == null || player.IsInspecting) return;
+        if (player == null || player.IsInspecting) return;
         var controller = player.GetComponent<PlayerController>();
         if (controller.ControlsBlocked) return;
         if (SceneUtility.GetBuildIndexByScenePath(path) < 0)
@@ -66,27 +65,17 @@ public class InvestigationDayFlow : MonoBehaviour
             Debug.LogError("Сцена не включена в Build Settings: " + path, this);
             return;
         }
-        if (!endShift)
+        AudioClip clip = journal.ApartmentDay == 1 ? transitionSoundDay1
+            : journal.ApartmentDay == 2 ? transitionSoundDay2 : transitionSoundDay3;
+        Action onArrived = null;
+        if (endShift)
         {
-            AudioClip clip = journal.ApartmentDay == 1 ? transitionSoundDay1
-                : journal.ApartmentDay == 2 ? transitionSoundDay2 : transitionSoundDay3;
-            // Переход живёт отдельно от участка и переживает его выгрузку.
-            ApartmentTransition.Begin(path, player, clip, fadeOutDuration, fadeInDuration, transitionVolume);
-            return;
+            var currentJournal = journal;
+            int nextDay = day + 1;
+            onArrived = () => currentJournal.SetApartmentDay(nextDay);
         }
-        loading = true;
-        int previousDay = journal.ApartmentDay;
-        if (endShift) journal.SetApartmentDay(day + 1);
-        controller.SetControlsBlocked(true);
-        player.inspectionUI.SetPrompt("");
-        try { SceneManager.LoadScene(path, LoadSceneMode.Single); }
-        catch (Exception error)
-        {
-            journal.SetApartmentDay(previousDay);
-            loading = false;
-            controller.SetControlsBlocked(false);
-            Debug.LogException(error, this);
-        }
+        ApartmentTransition.Begin(path, player, endShift, clip, fadeOutDuration, fadeInDuration,
+            transitionVolume, onArrived);
     }
 
     private void OnDisable()
