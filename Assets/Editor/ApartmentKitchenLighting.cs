@@ -53,9 +53,9 @@ public static class ApartmentKitchenLighting
                     }
                 }
                 ConfigureRoomSpots(flat);
-                var atmosphere = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<ApartmentDayAtmosphere>(true)).Single();
-                atmosphere.roomLights = atmosphere.roomLights.Where(l => l && l.enabled && l.intensity > 0)
-                    .Concat(new[] { light }).Distinct().ToArray();
+                var animation = flat.GetComponent<Animation>();
+                if (animation && animation.clip)
+                    ApartmentDaysBuilder.SetLightCurve(animation.clip, flat.transform, light, day);
                 EditorSceneManager.MarkSceneDirty(scene);
                 EditorSceneManager.SaveScene(scene);
             }
@@ -146,8 +146,5 @@ public static class ApartmentKitchenLighting
         diffuser.localScale = new Vector3(.34f / flat.transform.lossyScale.x,
             .004f / flat.transform.lossyScale.y, .34f / flat.transform.lossyScale.z);
         diffuser.GetComponent<Renderer>().sharedMaterial = material;
-        var atmosphere = roots.SelectMany(g => g.GetComponentsInChildren<ApartmentDayAtmosphere>(true)).Single();
-        atmosphere.roomLights = atmosphere.roomLights.Where(l => l && l.enabled && l.intensity > 0)
-            .Concat(new[] { kitchen }).Distinct().ToArray();
     }
 }

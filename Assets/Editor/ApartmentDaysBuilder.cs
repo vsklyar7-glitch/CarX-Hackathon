@@ -80,14 +80,14 @@ public static class ApartmentDaysBuilder
                     Box(clock.transform,"Clock face",Vector3.zero,new Vector3(.34f,.34f,.035f),paper,Quaternion.identity,true);
                     var hour=Box(clock.transform,"Hour hand",new Vector3(.02f,.045f,.025f),new Vector3(.014f,.11f,.008f),black,Quaternion.Euler(0,0,-30),true);
                     var minute=Box(clock.transform,"Minute hand",new Vector3(.06f,-.015f,.026f),new Vector3(.014f,.15f,.008f),black,Quaternion.Euler(0,0,-102),true);
-                    var atmosphere=story.AddComponent<ApartmentDayAtmosphere>();atmosphere.day=day;atmosphere.clockHourHand=hour.transform;atmosphere.clockMinuteHand=minute.transform;
                     var existing=flat.GetComponentsInChildren<Light>(true);
                     foreach(var light in existing){light.color=day==1?new Color(1,.83f,.62f):day==2?new Color(.65f,.78f,1):new Color(.62f,.68f,.78f);light.intensity*=day==1?.65f:day==2?.28f:.12f;}
                     var fill=new GameObject("Readable room fill",typeof(Light));fill.transform.position=new Vector3(table.center.x,2.2f,table.center.z);var fillLight=fill.GetComponent<Light>();fillLight.type=LightType.Point;fillLight.range=7;fillLight.intensity=day==1?1.1f:.55f;fillLight.color=day==1?new Color(1,.84f,.65f):new Color(.65f,.75f,1);
                     var depthLight=new GameObject("Light from basement",typeof(Light));depthLight.transform.SetParent(door.transform,false);depthLight.transform.localPosition=new Vector3(0,.4f,.25f);var dl=depthLight.GetComponent<Light>();dl.type=LightType.Point;dl.range=2;dl.color=new Color(1,.19f,.06f);dl.intensity=day==3?1.2f:0;
-                    atmosphere.roomLights=existing.Concat(new[]{fillLight,dl}).Where(l=>l.intensity>0).ToArray();
                     UseExistingBasementDoor(flat,door.transform,day);
                     ApartmentKitchenLighting.Apply(scene,day);
+                    AddAtmosphereAnimations(day, existing.Concat(new[]{fillLight,dl})
+                        .Where(light => light.enabled && light.intensity > 0), hour.transform, minute.transform);
                     RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=day==1?new Color(.18f,.17f,.15f):new Color(.09f,.11f,.15f);
                     var player=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/InteractionContent/Prefabs/InvestigationPlayer.prefab"),scene);
                     var spawn=flat.transform.Find("PlayerSpawn");
@@ -105,11 +105,98 @@ public static class ApartmentDaysBuilder
             var settings=EditorBuildSettings.scenes.ToList();
             for(int day=1;day<=3;day++){string path="Assets/Scenes/Day"+day+".unity";if(!settings.Any(s=>s.path==path))settings.Add(new EditorBuildSettingsScene(path,true));}
             EditorBuildSettings.scenes=settings.ToArray();
+            AssetDatabase.SaveAssets();
             File.WriteAllLines("output/apartment-days/generation.txt",report);
             return string.Join("\n",report);
         }
         finally{SceneManager.SetActiveScene(previous);EditorSceneManager.CloseScene(demo,true);EditorSceneManager.CloseScene(source,true);}
     }
+    // Клипы сохраняются отдельно и редактируются в окне Animation.
+    public static void AddAtmosphereAnimations(int day, System.Collections.Generic.IEnumerable<Light> lights,
+        Transform hour, Transform minute)
+    {
+        const string folder = "Assets/ApartmentDays/Animations";
+        if (!AssetDatabase.IsValidFolder(folder))
+            AssetDatabase.CreateFolder("Assets/ApartmentDays", "Animations");
+
+        foreach (var group in lights.Where(light => light).Distinct().GroupBy(light => light.transform.root))
+        {
+            var root = group.Key;
+            string role = root.name.StartsWith("americannredotoday") ? "Room lights" : "Basement light";
+            var clip = CreateLoop(folder, $"Day{day} {role}");
+            foreach (var light in group) SetLightCurve(clip, root, light, day);
+            SetAnimation(root, clip);
+        }
+
+        if (day != 2) return;
+        var clock = hour.parent;
+        var clockClip = CreateLoop(folder, "Day2 Clock hands");
+        const float loopDuration = 360;
+        AddHandCurve(hour, 1);
+        AddHandCurve(minute, 12);
+        SetAnimation(clock, clockClip);
+
+        void AddHandCurve(Transform hand, float degreesPerSecond)
+        {
+            float angle = hand.localEulerAngles.z;
+            var binding = EditorCurveBinding.FloatCurve(AnimationUtility.CalculateTransformPath(hand, clock),
+                typeof(Transform), "localEulerAnglesRaw.z");
+            AnimationUtility.SetEditorCurve(clockClip, binding,
+                AnimationCurve.Linear(0, angle, loopDuration, angle + loopDuration * degreesPerSecond));
+        }
+    }
+
+    internal static void SetLightCurve(AnimationClip clip, Transform root, Light light, int day)
+    {
+        float intensity = light.intensity;
+        AnimationCurve curve;
+        if (day == 3)
+        {
+            // Один период прежнего плавного изменения яркости.
+            const float speed = .7f;
+            curve = new AnimationCurve();
+            for (int i = 0; i <= 24; i++)
+            {
+                float phase = 2 * Mathf.PI * i / 24;
+                float value = intensity * (.85f + .15f * Mathf.Sin(phase));
+                float slope = intensity * .15f * speed * Mathf.Cos(phase);
+                curve.AddKey(new Keyframe(phase / speed, value, slope, slope));
+            }
+        }
+        else
+        {
+            float period = day == 1 ? 12 : 8;
+            curve = new AnimationCurve(
+                new Keyframe(0, intensity * .35f, 0, float.PositiveInfinity),
+                new Keyframe(.25f, intensity, float.PositiveInfinity, 0),
+                new Keyframe(period, intensity * .35f, float.PositiveInfinity, 0));
+        }
+        AnimationUtility.SetEditorCurve(clip, EditorCurveBinding.FloatCurve(
+            AnimationUtility.CalculateTransformPath(light.transform, root), typeof(Light), "m_Intensity"), curve);
+    }
+
+    private static AnimationClip CreateLoop(string folder, string name)
+    {
+        string path = $"{folder}/{name}.anim";
+        var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(path);
+        if (clip) return clip;
+        clip = new AnimationClip { name = name, legacy = true, wrapMode = WrapMode.Loop };
+        AssetDatabase.CreateAsset(clip, path);
+        return clip;
+    }
+
+    private static void SetAnimation(Transform root, AnimationClip clip)
+    {
+        var animation = root.GetComponent<Animation>();
+        if (!animation) animation = root.gameObject.AddComponent<Animation>();
+        animation.clip = clip;
+        animation.AddClip(clip, clip.name);
+        animation.wrapMode = WrapMode.Loop;
+        animation.playAutomatically = true;
+        animation.cullingType = AnimationCullingType.AlwaysAnimate;
+        PrefabUtility.RecordPrefabInstancePropertyModifications(animation);
+    }
+
     // Переносит оформление на штатную дверь, сохраняя её материал и ручку.
     public static void UseExistingBasementDoor(GameObject flat,Transform threshold,int day)
     {

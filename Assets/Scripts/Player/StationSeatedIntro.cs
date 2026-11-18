@@ -43,7 +43,7 @@ public class StationSeatedIntro : MonoBehaviour
         seatedViewPosition = new Vector3(standingCameraPosition.x, seatedCameraHeight, standingCameraPosition.z);
         seatedViewRotation = Quaternion.Euler(seatedLookDownAngle, 0f, 0f);
         capsuleWasEnabled = capsule.enabled;
-        controlsWereBlocked = player.ControlsBlocked;
+        controlsWereBlocked = player.ControlsBlockedByGameplay;
         // Keep the standing capsule out of the chair until the player gets up.
         capsule.enabled = false;
         player.SetControlsBlocked(true);
@@ -55,7 +55,7 @@ public class StationSeatedIntro : MonoBehaviour
 
     private void Update()
     {
-        if (!initialized) return;
+        if (!initialized || ApartmentTransition.Current != null) return;
         if (!standingUp)
         {
             var keyboard = Keyboard.current;

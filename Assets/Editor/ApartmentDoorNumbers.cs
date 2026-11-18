@@ -23,13 +23,6 @@ public static class ApartmentDoorNumbers
                 var roots = scene.GetRootGameObjects();
                 var door = roots.SelectMany(g => g.GetComponentsInChildren<Transform>(true)).Single(t => t.name == "Basement door 17");
                 Attach(door);
-                if (day == 1)
-                {
-                    var key = roots.SelectMany(g => g.GetComponentsInChildren<EvidenceItem>(true)).Single(e => e.evidenceId == "basement_key_17");
-                    var counter = roots.SelectMany(g => g.GetComponentsInChildren<Renderer>(true)).Single(r => r.name == "pCube273").bounds;
-                    key.transform.SetPositionAndRotation(new Vector3(counter.center.x, counter.max.y + .008f, counter.center.z - .5f), Quaternion.Euler(0, 15, 0));
-                    PrefabUtility.RecordPrefabInstancePropertyModifications(key.transform);
-                }
                 EditorSceneManager.MarkSceneDirty(scene);
                 EditorSceneManager.SaveScene(scene);
             }

@@ -1,0 +1,18 @@
+Day1 family_photo: reachable ray within 2,2m; player capsule clear at (-0.85, 0.04, -0.15)
+Day1 electricity_receipt: reachable ray within 2,2m; player capsule clear at (1.31, 0.04, -0.15)
+Day1 basement_key_17: reachable ray within 2,2m; player capsule clear at (2.86, 0.04, -1.54)
+Day1: 3 unique clues, all inspectable
+Day2 family_photo: reachable ray within 2,2m; player capsule clear at (-0.85, 0.04, -0.15)
+Day2 electricity_receipt: reachable ray within 2,2m; player capsule clear at (1.31, 0.04, -0.15)
+Day2 basement_key_17: reachable ray within 2,2m; player capsule clear at (2.86, 0.04, -1.54)
+Day2 dmitry_diary: reachable ray within 2,2m; player capsule clear at (-1.89, 0.04, -1.88)
+Day2 ivan_letter: reachable ray within 2,2m; player capsule clear at (2.86, 0.04, -0.59)
+Day2: 5 unique clues, all inspectable
+Day3 family_photo: reachable ray within 2,2m; player capsule clear at (-0.85, 0.04, -0.15)
+Day3 electricity_receipt: reachable ray within 2,2m; player capsule clear at (1.31, 0.04, -0.15)
+Day3 basement_key_17: reachable ray within 2,2m; player capsule clear at (2.86, 0.04, -1.54)
+Day3 dmitry_diary: reachable ray within 2,2m; player capsule clear at (-1.89, 0.04, -1.88)
+Day3 ivan_letter: reachable ray within 2,2m; player capsule clear at (2.86, 0.04, -0.59)
+Day3 child_drawing: reachable ray within 2,2m; player capsule clear at (4.10, 0.04, -3.82)
+Day3 father_note: reachable ray within 2,2m; player capsule clear at (0.65, 0.04, 0.91)
+Day3: 7 unique clues, all inspectable

@@ -1,0 +1,52 @@
+Assets/Scenes/Day1.unity: table size=(1.452, 0.480, 1.480), bottom=0,005; mesh collider OK
+Assets/Scenes/Day1.unity: sofabase3 size=(2.888, 0.922, 1.078), bottom=0,002; mesh collider OK
+Assets/Scenes/Day1.unity: leatherchairs size=(0.910, 0.902, 2.577), bottom=-0,001; mesh collider OK
+Assets/Scenes/Day1.unity: leatherstools size=(0.896, 0.430, 2.501), bottom=0,001; mesh collider OK
+Assets/Scenes/Day1.unity: toptablesurface size=(0.461, 0.659, 0.568), bottom=0,000; mesh collider OK
+Assets/Scenes/Day1.unity: telescope size=(1.197, 1.698, 1.247), bottom=0,001; mesh collider OK
+Assets/Scenes/Day1.unity: highchair size=(0.546, 1.537, 0.568), bottom=0,002; mesh collider OK
+Assets/Scenes/Day1.unity: speakerblock1 size=(0.405, 1.023, 0.504), bottom=0,001; mesh collider OK
+Assets/Scenes/Day1.unity: speakerblock4 size=(0.369, 1.023, 0.488), bottom=0,001; mesh collider OK
+Assets/Scenes/Day1.unity: polySurface4 size=(1.460, 0.970, 0.034), bottom=0,692; mesh collider OK
+Assets/Scenes/Day1.unity: pCylinder146 size=(0.731, 2.124, 0.530), bottom=0,145; mesh collider OK
+Assets/Scenes/Day1.unity: polySurface675 size=(0.797, 1.960, 0.620), bottom=0,126; mesh collider OK
+Assets/Scenes/Day1.unity: saved; kitchen/architecture transforms unchanged
+Assets/Scenes/Day2.unity: table size=(1.452, 0.480, 1.480), bottom=0,005; mesh collider OK
+Assets/Scenes/Day2.unity: sofabase3 size=(2.888, 0.922, 1.078), bottom=0,002; mesh collider OK
+Assets/Scenes/Day2.unity: leatherchairs size=(0.910, 0.902, 2.577), bottom=-0,001; mesh collider OK
+Assets/Scenes/Day2.unity: leatherstools size=(0.896, 0.430, 2.501), bottom=0,001; mesh collider OK
+Assets/Scenes/Day2.unity: toptablesurface size=(0.461, 0.659, 0.568), bottom=0,000; mesh collider OK
+Assets/Scenes/Day2.unity: telescope size=(1.197, 1.698, 1.247), bottom=0,001; mesh collider OK
+Assets/Scenes/Day2.unity: highchair size=(1.630, 0.994, 0.568), bottom=0,025; mesh collider OK
+Assets/Scenes/Day2.unity: speakerblock1 size=(0.405, 1.023, 0.504), bottom=0,001; mesh collider OK
+Assets/Scenes/Day2.unity: speakerblock4 size=(0.369, 1.023, 0.488), bottom=0,001; mesh collider OK
+Assets/Scenes/Day2.unity: polySurface4 size=(1.460, 0.970, 0.034), bottom=0,692; mesh collider OK
+Assets/Scenes/Day2.unity: pCylinder146 size=(0.731, 2.124, 0.530), bottom=0,145; mesh collider OK
+Assets/Scenes/Day2.unity: polySurface675 size=(0.797, 1.960, 0.620), bottom=0,126; mesh collider OK
+Assets/Scenes/Day2.unity: saved; kitchen/architecture transforms unchanged
+Assets/Scenes/Day3.unity: table size=(1.452, 0.480, 1.480), bottom=0,005; mesh collider OK
+Assets/Scenes/Day3.unity: sofabase3 size=(2.888, 0.922, 1.078), bottom=0,002; mesh collider OK
+Assets/Scenes/Day3.unity: leatherchairs size=(0.910, 0.902, 2.577), bottom=-0,001; mesh collider OK
+Assets/Scenes/Day3.unity: leatherstools size=(0.896, 0.430, 2.501), bottom=0,001; mesh collider OK
+Assets/Scenes/Day3.unity: toptablesurface size=(0.461, 0.659, 0.568), bottom=0,000; mesh collider OK
+Assets/Scenes/Day3.unity: telescope size=(1.197, 1.698, 1.247), bottom=0,001; mesh collider OK
+Assets/Scenes/Day3.unity: highchair size=(1.630, 0.994, 0.568), bottom=0,025; mesh collider OK
+Assets/Scenes/Day3.unity: speakerblock1 size=(0.405, 1.023, 0.504), bottom=0,001; mesh collider OK
+Assets/Scenes/Day3.unity: speakerblock4 size=(0.369, 1.023, 0.488), bottom=0,001; mesh collider OK
+Assets/Scenes/Day3.unity: polySurface4 size=(1.460, 0.970, 0.034), bottom=0,692; mesh collider OK
+Assets/Scenes/Day3.unity: pCylinder146 size=(0.731, 2.124, 0.530), bottom=0,145; mesh collider OK
+Assets/Scenes/Day3.unity: polySurface675 size=(0.797, 1.960, 0.620), bottom=0,126; mesh collider OK
+Assets/Scenes/Day3.unity: saved; kitchen/architecture transforms unchanged
+Assets/Scenes/Scene2.unity: table size=(1.452, 0.480, 1.480), bottom=0,005; mesh collider OK
+Assets/Scenes/Scene2.unity: sofabase3 size=(2.888, 0.922, 1.078), bottom=0,002; mesh collider OK
+Assets/Scenes/Scene2.unity: leatherchairs size=(0.910, 0.902, 2.577), bottom=-0,001; mesh collider OK
+Assets/Scenes/Scene2.unity: leatherstools size=(0.896, 0.430, 2.501), bottom=0,001; mesh collider OK
+Assets/Scenes/Scene2.unity: toptablesurface size=(0.461, 0.659, 0.568), bottom=0,000; mesh collider OK
+Assets/Scenes/Scene2.unity: telescope size=(1.197, 1.698, 1.247), bottom=0,001; mesh collider OK
+Assets/Scenes/Scene2.unity: highchair size=(0.546, 1.537, 0.568), bottom=0,002; mesh collider OK
+Assets/Scenes/Scene2.unity: speakerblock1 size=(0.405, 1.023, 0.504), bottom=0,001; mesh collider OK
+Assets/Scenes/Scene2.unity: speakerblock4 size=(0.369, 1.023, 0.488), bottom=0,001; mesh collider OK
+Assets/Scenes/Scene2.unity: polySurface4 size=(1.460, 0.970, 0.034), bottom=0,692; mesh collider OK
+Assets/Scenes/Scene2.unity: pCylinder146 size=(0.731, 2.124, 0.530), bottom=0,145; mesh collider OK
+Assets/Scenes/Scene2.unity: polySurface675 size=(0.797, 1.960, 0.620), bottom=0,126; mesh collider OK
+Assets/Scenes/Scene2.unity: saved; kitchen/architecture transforms unchanged
