@@ -49,7 +49,7 @@ public class PlayerNotebook : MonoBehaviour
 
     public bool Open()
     {
-        if (interaction != null && interaction.IsSolvingPhoto) return false;
+        if (interaction != null && (interaction.IsSolvingPhoto || interaction.IsReadingStationMail)) return false;
         if (IsOpen || view == null || (controller.ControlsBlocked && (interaction == null || !interaction.IsInspecting))) return false;
         savedControlsBlocked = controller.ControlsBlocked;
         savedCursor = Cursor.lockState;

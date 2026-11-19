@@ -32,21 +32,6 @@ public static class ApartmentTransitionVerification
             await WaitUntil(() => SceneManager.GetActiveScene().path == Station);
         }
         await NextFrame();
-        var journal = EvidenceJournal.GetOrCreate();
-        journal.SetApartmentDay(day);
-        int evidenceCount = journal.Count;
-        var player = UnityEngine.Object.FindFirstObjectByType<PlayerInteraction>();
-        var controller = player.GetComponent<PlayerController>();
-        var intro = player.GetComponent<StationSeatedIntro>();
-        if (intro != null) intro.enabled = false;
-        var exit = player.nearbyExits.First(e => e != null && e.isActiveAndEnabled && e.dayFlow != null);
-        var area = exit.GetComponent<BoxCollider>();
-        var destination = new GameObject("Transition test position");
-        destination.transform.position = area.transform.TransformPoint(area.center) - Vector3.up * .9f;
-        controller.Teleport(destination.transform);
-        UnityEngine.Object.Destroy(destination);
-        Check(player.FindTarget() == exit, "Door is not the interaction target.");
-
         var previousBackgroundBehavior = InputSystem.settings.backgroundBehavior;
         var previousEditorInputBehavior = InputSystem.settings.editorInputBehaviorInPlayMode;
         InputSystem.settings.backgroundBehavior = InputSettings.BackgroundBehavior.IgnoreFocus;
@@ -55,6 +40,31 @@ public static class ApartmentTransitionVerification
         var keyboard = InputSystem.AddDevice<Keyboard>();
         try
         {
+            if (UnityEngine.Object.FindAnyObjectByType<GameIntro>() != null)
+            {
+                QueueKey(keyboard, Key.Enter);
+                await WaitUntil(() => UnityEngine.Object.FindAnyObjectByType<GameIntro>() == null);
+                ReleaseKeys(keyboard);
+                await NextFrame();
+            }
+
+            var journal = EvidenceJournal.GetOrCreate();
+            journal.SetApartmentDay(day);
+            journal.ReadStationMail();
+            var item = UnityEngine.Object.FindObjectsByType<EvidenceItem>().Single(e => e.evidenceId == "case_file");
+            journal.Add(item);
+            int evidenceCount = journal.Count;
+            var player = UnityEngine.Object.FindFirstObjectByType<PlayerInteraction>();
+            var controller = player.GetComponent<PlayerController>();
+            var intro = player.GetComponent<StationSeatedIntro>();
+            if (intro != null) intro.enabled = false;
+            var exit = player.nearbyExits.First(e => e != null && e.isActiveAndEnabled && e.dayFlow != null);
+            var area = exit.GetComponent<BoxCollider>();
+            var destination = new GameObject("Transition test position");
+            destination.transform.position = area.transform.TransformPoint(area.center) - Vector3.up * .9f;
+            controller.Teleport(destination.transform);
+            UnityEngine.Object.Destroy(destination);
+            Check(player.FindTarget() == exit, "Door is not the interaction target.");
             exit.Interact(player);
             string dayPath = $"Assets/Scenes/Day{day}.unity";
             string sound = day == 1 ? "transitionSound" : "transitionAudioDay" + day;

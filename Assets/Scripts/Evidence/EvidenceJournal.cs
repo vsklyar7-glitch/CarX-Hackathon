@@ -8,7 +8,16 @@ public class EvidenceJournal : MonoBehaviour
     public static EvidenceJournal Instance { get; private set; }
     public event Action<string> EvidenceAdded;
     public event Action PhotoRestored;
+    public event Action StationMailRead;
     public bool FamilyPhotoRestored { get; private set; }
+    public bool HasReadStationMail { get; private set; }
+
+    public void ReadStationMail()
+    {
+        if (HasReadStationMail) return;
+        HasReadStationMail = true;
+        StationMailRead?.Invoke();
+    }
 
     public void RestoreFamilyPhoto()
     {

@@ -35,8 +35,6 @@ public static class NotebookBuilder
             scaler.referenceResolution = new Vector2(1280, 720);
             scaler.matchWidthOrHeight = .5f;
             NotebookView view = root.AddComponent<NotebookView>();
-            view.shortcutHint = Text(root.transform, "NotebookHint", "J  —  БЛОКНОТ", new Vector2(.78f, .025f), new Vector2(.98f, .08f), 17, new Color(.9f,.83f,.67f));
-            view.shortcutHint.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("Assets/InteractionContent/RussianFont.asset");
             RectTransform shade = Box(root.transform, "NotebookPanel", Vector2.zero, Vector2.one, new Color(.025f,.02f,.018f,.88f), true);
             view.panel = shade.gameObject;
             RectTransform cover = Box(shade, "LeatherCover", new Vector2(.055f,.115f), new Vector2(.945f,.9f), new Color(.16f,.095f,.055f));
@@ -65,7 +63,7 @@ public static class NotebookBuilder
             view.next = Button(cover, "NextPage", "→", new Vector2(.87f,.075f), new Vector2(.95f,.20f));
             view.close = Button(shade, "CloseNotebook", "ЗАКРЫТЬ  [ J / ESC ]", new Vector2(.72f,.025f), new Vector2(.945f,.09f));
             var controlsHint = Text(shade, "ControlsHint", "← / →  —  ПЕРЕЛИСТЫВАТЬ", new Vector2(.055f,.025f), new Vector2(.5f,.09f), 17, new Color(.86f,.8f,.66f));
-            controlsHint.font = view.shortcutHint.font;
+            controlsHint.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("Assets/InteractionContent/RussianFont.asset");
             view.turningLeaf = Box(cover, "TurningLeaf", new Vector2(.5f,.03f), new Vector2(.978f,.97f), new Color(.86f,.79f,.63f));
             view.turningLeaf.pivot = new Vector2(0,.5f);
             view.turningLeaf.anchoredPosition = Vector2.zero;

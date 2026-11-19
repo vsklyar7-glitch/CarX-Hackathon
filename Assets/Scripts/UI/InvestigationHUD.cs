@@ -36,6 +36,7 @@ public class InvestigationHUD : MonoBehaviour
         journal = EvidenceJournal.GetOrCreate();
         journal.EvidenceAdded += OnEvidenceAdded;
         journal.PhotoRestored += RefreshObjective;
+        journal.StationMailRead += OnStationMailRead;
         if (!hintsVisible.HasValue) hintsVisible = showHintsOnStart;
         wasSeated = IsSeated;
         apartmentDay = journal.ApartmentDay;
@@ -67,8 +68,6 @@ public class InvestigationHUD : MonoBehaviour
             RefreshObjective();
         }
         if (controlsText != null) controlsText.enabled = !modal && hintsVisible.GetValueOrDefault(showHintsOnStart);
-        if (notebook != null && notebook.view != null && notebook.view.shortcutHint != null)
-            notebook.view.shortcutHint.enabled = !modal && !IsSeated && hintsVisible.GetValueOrDefault(showHintsOnStart);
         if (toggleText != null) toggleText.enabled = !modal;
         if (objectiveText != null) objectiveText.enabled = !modal;
     }
@@ -78,7 +77,9 @@ public class InvestigationHUD : MonoBehaviour
         if (controlsText != null)
             controlsText.text = IsSeated ? (journal != null && journal.Contains("case_file")
                     ? "WASD — встать   •   Мышь — обзор"
-                    : "Мышь — обзор   •   E — прочитать дело")
+                    : journal != null && journal.HasReadStationMail
+                        ? "Мышь — обзор   •   E — прочитать дело"
+                        : "Мышь — обзор   •   E — открыть почту")
                 : "WASD — ходьба   •   Мышь — обзор   •   Shift — бег   •   Пробел — прыжок\nE — осмотр   •   J — блокнот   •   Esc — курсор";
         if (toggleText != null)
             toggleText.text = toggleKey + (hintsVisible.GetValueOrDefault(showHintsOnStart)
@@ -91,6 +92,12 @@ public class InvestigationHUD : MonoBehaviour
         if (id == "case_file") RefreshControls();
     }
 
+    private void OnStationMailRead()
+    {
+        RefreshControls();
+        RefreshObjective();
+    }
+
     private void RefreshObjective()
     {
         if (objectiveText == null) return;
@@ -99,7 +106,7 @@ public class InvestigationHUD : MonoBehaviour
         else if (flow.day == 0)
         {
             if (journal.ApartmentDay == 1 && !journal.Contains("case_file"))
-                objective = "Прочитайте дело";
+                objective = journal.HasReadStationMail ? "Прочитайте дело" : "Посмотрите письмо на электронной почте";
             else objective = "Покиньте участок и отправляйтесь в квартиру №17";
         }
         else
@@ -122,5 +129,6 @@ public class InvestigationHUD : MonoBehaviour
         if (journal == null) return;
         journal.EvidenceAdded -= OnEvidenceAdded;
         journal.PhotoRestored -= RefreshObjective;
+        journal.StationMailRead -= OnStationMailRead;
     }
 }

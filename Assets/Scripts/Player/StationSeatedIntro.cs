@@ -12,6 +12,7 @@ public class StationSeatedIntro : MonoBehaviour
     [Min(0.1f)] public float standUpDuration = 1.2f;
 
     private PlayerController player;
+    private PlayerInteraction interaction;
     private CharacterController capsule;
     private Transform view;
     private Vector3 standingCameraPosition;
@@ -30,6 +31,7 @@ public class StationSeatedIntro : MonoBehaviour
     private void Start()
     {
         player = GetComponent<PlayerController>();
+        interaction = GetComponent<PlayerInteraction>();
         capsule = GetComponent<CharacterController>();
         view = player.playerCamera;
         if (view == null || standingPoint == null)
@@ -58,7 +60,7 @@ public class StationSeatedIntro : MonoBehaviour
 
     private void Update()
     {
-        if (!initialized || ApartmentTransition.Current != null) return;
+        if (!initialized || ApartmentTransition.Current != null || (interaction != null && interaction.IsInspecting)) return;
         if (!standingUp)
         {
             var keyboard = Keyboard.current;
@@ -81,8 +83,6 @@ public class StationSeatedIntro : MonoBehaviour
                 view.localRotation = Quaternion.Euler(seatedPitch, 0f, 0f);
             }
             if (!EvidenceJournal.GetOrCreate().Contains("case_file")) return;
-            PlayerInteraction interaction = GetComponent<PlayerInteraction>();
-            if (interaction != null && interaction.IsInspecting) return;
             if (!keyboard.wKey.wasPressedThisFrame && !keyboard.aKey.wasPressedThisFrame
                 && !keyboard.sKey.wasPressedThisFrame && !keyboard.dKey.wasPressedThisFrame) return;
             seatedViewRotation = view.localRotation;

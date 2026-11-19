@@ -79,9 +79,9 @@ public class CaseFileView : MonoBehaviour
         photograph.raycastTarget = false;
         counter = Text("Page number", root.transform, font, 16, Ink,
             new Vector2(.40f, .16f), new Vector2(.60f, .21f), TextAlignmentOptions.Center);
-        previous = Button("Previous page", "◀  НАЗАД", root.transform, font,
+        previous = Button("Previous page", "НАЗАД", root.transform, font,
             new Vector2(.18f, .16f), new Vector2(.34f, .22f), () => Turn(-1));
-        next = Button("Next page", "ДАЛЕЕ  ▶", root.transform, font,
+        next = Button("Next page", "ДАЛЕЕ", root.transform, font,
             new Vector2(.66f, .16f), new Vector2(.82f, .22f), () => Turn(1));
         Button("Close case", "ЗАКРЫТЬ  ·  E / ESC", root.transform, font,
             new Vector2(.39f, .035f), new Vector2(.61f, .09f), () => close?.Invoke());

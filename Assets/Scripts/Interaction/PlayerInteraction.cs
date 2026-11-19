@@ -15,8 +15,10 @@ public class PlayerInteraction : MonoBehaviour
     private IInteractable target;
     private bool modalOpen;
     public bool IsInspecting => modalOpen;
+    public bool IsReadingStationMail => openMail != null;
     public bool IsSolvingPhoto => photoPuzzle != null && photoPuzzle.IsOpen;
     private PhotoPuzzleView photoPuzzle;
+    private StationMailComputer openMail;
     private PlayerNotebook notebook;
     private StationSeatedIntro seatedIntro;
     private bool previousBlocked;
@@ -64,8 +66,14 @@ public class PlayerInteraction : MonoBehaviour
         if ((!controller.ControlsBlocked || (seatedIntro != null && seatedIntro.IsSeated))
             && Cursor.lockState == CursorLockMode.Locked)
             target = FindTarget();
-        if (seatedIntro != null && seatedIntro.IsSeated && !(target is EvidenceItem evidence && evidence.evidenceId == "case_file"))
+        if (seatedIntro != null && seatedIntro.IsSeated && !(target is StationMailComputer) &&
+            !(target is EvidenceItem evidence && evidence.evidenceId == "case_file"))
             target = null;
+        if (target is EvidenceItem item && CaseRequiresMail(item))
+        {
+            inspectionUI.SetPrompt("Сначала прочитайте письмо на компьютере");
+            return;
+        }
         inspectionUI.SetPrompt(target != null ? target.Prompt : "");
         if (target != null && keyboard != null && keyboard.eKey.wasPressedThisFrame) target.Interact(this);
     }
@@ -94,19 +102,13 @@ public class PlayerInteraction : MonoBehaviour
     public void Inspect(EvidenceItem item)
     {
         bool seatedCase = seatedIntro != null && seatedIntro.IsSeated && item != null && item.evidenceId == "case_file";
-        if (modalOpen || item == null || (controller.ControlsBlocked && !seatedCase) || inspectionUI == null) return;
+        if (item == null || CaseRequiresMail(item)) return;
         if (string.IsNullOrWhiteSpace(item.evidenceId))
         {
             Debug.LogError("У улики не заполнен Evidence Id.", item);
             return;
         }
-        previousBlocked = controller.ControlsBlocked;
-        previousCursor = Cursor.lockState;
-        previousCursorVisible = Cursor.visible;
-        modalOpen = true;
-        controller.SetControlsBlocked(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (!OpenInspection(seatedCase)) return;
         if (item.NeedsAssembly)
         {
             if (photoPuzzle == null) photoPuzzle = inspectionUI.gameObject.AddComponent<PhotoPuzzleView>();
@@ -119,6 +121,36 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
         ShowEvidence(item);
+    }
+
+    public void InspectMail(StationMailComputer computer)
+    {
+        if (computer == null || !computer.CanOpen || !OpenInspection(seatedIntro != null && seatedIntro.IsSeated))
+            return;
+        openMail = computer;
+        inspectionUI.SetPrompt("");
+        computer.Show();
+    }
+
+    private bool CaseRequiresMail(EvidenceItem item)
+    {
+        var flow = InvestigationDayFlow.Current;
+        return item.evidenceId == "case_file" && flow != null && flow.day == 0 &&
+            !EvidenceJournal.GetOrCreate().HasReadStationMail;
+    }
+
+    private bool OpenInspection(bool allowWhileSeated)
+    {
+        if (modalOpen || inspectionUI == null || ApartmentTransition.Current != null ||
+            (notebook != null && notebook.IsOpen) || (controller.ControlsBlocked && !allowWhileSeated)) return false;
+        previousBlocked = controller.ControlsBlockedByGameplay;
+        previousCursor = Cursor.lockState;
+        previousCursorVisible = Cursor.visible;
+        modalOpen = true;
+        controller.SetControlsBlocked(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        return true;
     }
 
     private void ShowEvidence(EvidenceItem item)
@@ -136,6 +168,8 @@ public class PlayerInteraction : MonoBehaviour
         closedFrame = Time.frameCount;
         if (inspectionUI != null) inspectionUI.Hide();
         if (photoPuzzle != null) photoPuzzle.Hide();
+        if (openMail != null) openMail.Hide();
+        openMail = null;
         controller.SetControlsBlocked(previousBlocked);
         Cursor.lockState = previousCursor;
         Cursor.visible = previousCursorVisible;

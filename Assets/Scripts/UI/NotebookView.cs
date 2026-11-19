@@ -11,7 +11,6 @@ public class NotebookView : MonoBehaviour
     public TMP_Text body;
     public TMP_Text pageNumber;
     public TMP_Text evidenceCount;
-    public TMP_Text shortcutHint;
     public UnityEngine.UI.Image illustration;
     public UnityEngine.UI.Button previous;
     public UnityEngine.UI.Button next;
@@ -45,7 +44,6 @@ public class NotebookView : MonoBehaviour
         journal.EvidenceAdded += RefreshForNewEvidence;
         PageIndex = Mathf.Clamp(PageIndex, 0, Mathf.Max(0, journal.Count - 1));
         panel.SetActive(true);
-        if (shortcutHint != null) shortcutHint.gameObject.SetActive(false);
         RefreshPage();
     }
 
@@ -58,7 +56,6 @@ public class NotebookView : MonoBehaviour
         IsTurning = false;
         turningLeaf.gameObject.SetActive(false);
         panel.SetActive(false);
-        if (shortcutHint != null) shortcutHint.gameObject.SetActive(true);
     }
 
     public void Turn(int direction)
