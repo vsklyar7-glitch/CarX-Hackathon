@@ -13,6 +13,7 @@ public class InspectionUI : MonoBehaviour
     public UnityEngine.UI.Image image;
     public UnityEngine.UI.Button closeButton;
     private Action onClose;
+    private CaseFileView caseFile;
 
     private void Awake()
     {
@@ -26,6 +27,12 @@ public class InspectionUI : MonoBehaviour
     {
         onClose = close;
         SetPrompt("");
+        if (item.evidenceId == "case_file")
+        {
+            if (caseFile == null) caseFile = gameObject.AddComponent<CaseFileView>();
+            caseFile.Show(title.font, close);
+            return;
+        }
         title.text = item.title;
         description.text = item.description;
         Sprite illustration = item.image != null ? item.image : Resources.Load<Sprite>("NotebookArt/" + item.evidenceId);
@@ -51,7 +58,7 @@ public class InspectionUI : MonoBehaviour
         panel.SetActive(true);
     }
 
-    public void Hide() { panel.SetActive(false); onClose = null; }
+    public void Hide() { panel.SetActive(false); if (caseFile != null) caseFile.Hide(); onClose = null; }
     private void Close() { onClose?.Invoke(); }
     private void OnDestroy() { if (closeButton != null) closeButton.onClick.RemoveListener(Close); }
 }

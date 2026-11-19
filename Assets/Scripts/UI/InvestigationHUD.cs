@@ -76,14 +76,20 @@ public class InvestigationHUD : MonoBehaviour
     private void RefreshControls()
     {
         if (controlsText != null)
-            controlsText.text = IsSeated ? "WASD — встать"
+            controlsText.text = IsSeated ? (journal != null && journal.Contains("case_file")
+                    ? "WASD — встать   •   Мышь — обзор"
+                    : "Мышь — обзор   •   E — прочитать дело")
                 : "WASD — ходьба   •   Мышь — обзор   •   Shift — бег   •   Пробел — прыжок\nE — осмотр   •   J — блокнот   •   Esc — курсор";
         if (toggleText != null)
             toggleText.text = toggleKey + (hintsVisible.GetValueOrDefault(showHintsOnStart)
                 ? " — скрыть подсказки" : " — показать подсказки");
     }
 
-    private void OnEvidenceAdded(string id) => RefreshObjective();
+    private void OnEvidenceAdded(string id)
+    {
+        RefreshObjective();
+        if (id == "case_file") RefreshControls();
+    }
 
     private void RefreshObjective()
     {
@@ -92,10 +98,9 @@ public class InvestigationHUD : MonoBehaviour
         if (flow == null) objective = "Осмотрите улики вокруг вас.";
         else if (flow.day == 0)
         {
-            if (IsSeated) objective = "Встаньте из-за стола.";
-            else if (journal.ApartmentDay == 1 && !journal.Contains("case_file"))
-                objective = "Осмотрите папку дела на столе.";
-            else objective = "Покиньте участок и отправляйтесь в квартиру №17.";
+            if (journal.ApartmentDay == 1 && !journal.Contains("case_file"))
+                objective = "Прочитайте дело";
+            else objective = "Покиньте участок и отправляйтесь в квартиру №17";
         }
         else
         {

@@ -18,6 +18,7 @@ public class PlayerInteraction : MonoBehaviour
     public bool IsSolvingPhoto => photoPuzzle != null && photoPuzzle.IsOpen;
     private PhotoPuzzleView photoPuzzle;
     private PlayerNotebook notebook;
+    private StationSeatedIntro seatedIntro;
     private bool previousBlocked;
     private CursorLockMode previousCursor;
     private bool previousCursorVisible;
@@ -29,6 +30,7 @@ public class PlayerInteraction : MonoBehaviour
         if (GetComponent<PlayerNotebook>() == null) gameObject.AddComponent<PlayerNotebook>();
         notebook = GetComponent<PlayerNotebook>();
         controller = GetComponent<PlayerController>();
+        seatedIntro = GetComponent<StationSeatedIntro>();
         if (playerCamera == null) playerCamera = GetComponentInChildren<Camera>();
         if (inspectionUI == null) inspectionUI = GetComponentInChildren<InspectionUI>(true);
         if (playerCamera == null || inspectionUI == null)
@@ -59,8 +61,11 @@ public class PlayerInteraction : MonoBehaviour
             if (keyboard != null && keyboard.eKey.wasPressedThisFrame) dayFlow.ReturnToStation(this);
             return;
         }
-        if (!controller.ControlsBlocked && Cursor.lockState == CursorLockMode.Locked)
+        if ((!controller.ControlsBlocked || (seatedIntro != null && seatedIntro.IsSeated))
+            && Cursor.lockState == CursorLockMode.Locked)
             target = FindTarget();
+        if (seatedIntro != null && seatedIntro.IsSeated && !(target is EvidenceItem evidence && evidence.evidenceId == "case_file"))
+            target = null;
         inspectionUI.SetPrompt(target != null ? target.Prompt : "");
         if (target != null && keyboard != null && keyboard.eKey.wasPressedThisFrame) target.Interact(this);
     }
@@ -69,7 +74,7 @@ public class PlayerInteraction : MonoBehaviour
     public IInteractable FindTarget()
     {
         if (playerCamera == null) return null;
-        if (nearbyExits != null)
+        if ((seatedIntro == null || !seatedIntro.IsSeated) && nearbyExits != null)
             foreach (StationExit exit in nearbyExits)
                 if (exit != null && exit.isActiveAndEnabled && exit.IsNearby(this)) return exit;
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f));
@@ -88,7 +93,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Inspect(EvidenceItem item)
     {
-        if (modalOpen || item == null || controller.ControlsBlocked || inspectionUI == null) return;
+        bool seatedCase = seatedIntro != null && seatedIntro.IsSeated && item != null && item.evidenceId == "case_file";
+        if (modalOpen || item == null || (controller.ControlsBlocked && !seatedCase) || inspectionUI == null) return;
         if (string.IsNullOrWhiteSpace(item.evidenceId))
         {
             Debug.LogError("У улики не заполнен Evidence Id.", item);

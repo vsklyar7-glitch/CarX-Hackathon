@@ -19,11 +19,13 @@ public class StationSeatedIntro : MonoBehaviour
     private Vector3 seatedPosition;
     private Vector3 seatedViewPosition;
     private Quaternion seatedViewRotation;
+    private float seatedPitch;
     private bool capsuleWasEnabled;
     private bool controlsWereBlocked;
     private bool initialized;
     private bool standingUp;
     private float elapsed;
+    public bool IsSeated => initialized && !standingUp;
 
     private void Start()
     {
@@ -42,6 +44,7 @@ public class StationSeatedIntro : MonoBehaviour
         seatedPosition = transform.position;
         seatedViewPosition = new Vector3(standingCameraPosition.x, seatedCameraHeight, standingCameraPosition.z);
         seatedViewRotation = Quaternion.Euler(seatedLookDownAngle, 0f, 0f);
+        seatedPitch = seatedLookDownAngle;
         capsuleWasEnabled = capsule.enabled;
         controlsWereBlocked = player.ControlsBlockedByGameplay;
         // Keep the standing capsule out of the chair until the player gets up.
@@ -70,8 +73,19 @@ public class StationSeatedIntro : MonoBehaviour
                 Cursor.visible = false;
             }
             if (Cursor.lockState != CursorLockMode.Locked || keyboard == null || Time.timeScale == 0f) return;
+            if (Mouse.current != null)
+            {
+                Vector2 look = Mouse.current.delta.ReadValue() * (player.mouseSensitivity * 0.08f);
+                transform.Rotate(Vector3.up * look.x);
+                seatedPitch = Mathf.Clamp(seatedPitch - look.y, -80f, 80f);
+                view.localRotation = Quaternion.Euler(seatedPitch, 0f, 0f);
+            }
+            if (!EvidenceJournal.GetOrCreate().Contains("case_file")) return;
+            PlayerInteraction interaction = GetComponent<PlayerInteraction>();
+            if (interaction != null && interaction.IsInspecting) return;
             if (!keyboard.wKey.wasPressedThisFrame && !keyboard.aKey.wasPressedThisFrame
                 && !keyboard.sKey.wasPressedThisFrame && !keyboard.dKey.wasPressedThisFrame) return;
+            seatedViewRotation = view.localRotation;
             standingUp = true;
         }
 
@@ -88,6 +102,7 @@ public class StationSeatedIntro : MonoBehaviour
     {
         if (!initialized) return;
         view.SetLocalPositionAndRotation(standingCameraPosition, standingCameraRotation);
+        player.SyncCameraPitch();
         capsule.enabled = capsuleWasEnabled;
         Physics.SyncTransforms();
         player.SetControlsBlocked(controlsWereBlocked);

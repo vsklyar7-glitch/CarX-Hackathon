@@ -86,6 +86,12 @@ public class PlayerController : MonoBehaviour
         if (!blocked) blockedThroughFrame = Time.frameCount;
     }
 
+    public void SyncCameraPitch()
+    {
+        if (playerCamera != null)
+            cameraRotationX = Mathf.DeltaAngle(0f, playerCamera.localEulerAngles.x);
+    }
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.rigidbody;
